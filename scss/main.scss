@@ -1,3 +1,4 @@
+@import 'bootstrap';
 @import 'normalize';
 
 @import 'variebles';
@@ -7,3 +8,49 @@
 @import 'header';
 @import 'home';
 @import 'footer';
+
+.container {
+  @include mediamin(1200px) {
+    max-width: 1310px;
+  }
+}
+
+body.active,
+html.active {
+  overflow-y: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $fontRobotoRegular;
+  font-size: 16px;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn {
+  font-family: $fontRobotoMedium;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-block;
+  &--yellow {
+    background-color: #F7D504;
+    border: 1px solid transparent;
+    transition: border-color .3s;
+    color: #372120;
+    padding: 13px 10px;
+    min-width: 210px;
+    &:hover {
+      border: 1px solid #372120;
+    }
+  }
+}

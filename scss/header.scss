@@ -1,0 +1,175 @@
+.header {
+  &-top--overlay {
+    background-color: #372120;
+  }
+  &-top {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 0;
+    .links {
+      display: flex;
+      margin-right: 64px;
+      li {
+        &:not(:first-child) {
+          margin-left: 70px;
+        }
+        a {
+          font-family: $fontRobotoLight;
+          font-size: 14px;
+          line-height: 16px;
+          color: #fff;
+          &:hover {
+            color: #fff;
+            font-family: $fontRobotoRegular;
+          }
+        }
+      }
+    }
+    .social {
+      display: flex;
+      li {
+        &:not(:first-child) {
+          margin-left: 26px;
+        }
+        a {
+          display: inline-block;
+          position: relative;
+          &:hover .hover {
+            opacity: 1;
+          }
+          .hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity .3s;
+          }
+        }
+      }
+    }
+  }
+  &-middle {
+    background-color: #fff;
+    padding: 20px 0 7px;
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .header__phone {
+        display: inline-block;
+        position: relative;
+        color: #000;
+        font-family: $fontRobotoBold;
+        font-size: 24px;
+        line-height: 28px;
+        &::before {
+          content: " ";
+          display: block;
+          width: 20px;
+          height: 20px;
+          background-image: url(../img/elements/phone-icon.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          position: absolute;
+          top: 3px;
+          left: -27px;
+        }
+        span {
+          font-family: $fontRobotoRegular;
+          display: block;
+          font-size: 11px;
+          line-height: 13px;
+        }
+      }
+      .btn {
+        margin-left: 40px;
+      }
+    }
+  }
+  &__numbers {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding-bottom: 21px;
+    li {
+      position: relative;
+      &.dropdown {
+        &::after {
+          content: " ";
+          display: block;
+          width: 11px;
+          height: 7px;
+          background-image: url(../img/elements/arrow-bottom-yellow.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          position: absolute;
+          right: -15px;
+          top: 8px;
+          transition: transform .3s;
+        }
+        &:hover {
+          ul {
+            opacity: 1;
+            visibility: visible;
+          }
+          &::after {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      a {
+        line-height: 19px;
+        color: #000;
+      }
+      ul {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 22px;
+        left: -16px;
+        background: #FFFFFF;
+        border: 1px solid #B5A9A3;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        transition: opacity .3s;
+        padding: 8px 26px 28px 15px;
+        width: 210px;
+      }
+    }
+  }
+  &__menu {
+    background-color: rgba(237, 234, 228, 0.4);
+    .links {
+      display: flex;
+      li {
+        a {
+          display: block;
+          padding: 22px 33.4px;
+          text-align: center;
+          background-color: #EDEAE4;
+          font-family: $fontRobotoBold;
+          font-size: 14px;
+          line-height: 16px;
+          color: #000;
+          border: 1px solid #B5A9A3;
+          border-left: none;
+          transition: background-color .3s, border-color .3s, color .3s;
+          &:hover {
+            background-color: #372120;
+            border-color: #372120;
+            color: #fff;
+          }
+        }
+        &:first-child {
+          a {
+            border-left: 1px solid #B5A9A3;
+            &:hover {
+              border-left: 1px solid #372120;
+            }
+          }
+        }
+      }
+    }
+  }
+}
