@@ -1,6 +1,6 @@
 .header {
   &-top--overlay {
-    background-color: #372120;
+    background-color: $colorBrown;
   }
   &-top {
     display: flex;
@@ -156,8 +156,8 @@
           border-left: none;
           transition: background-color .3s, border-color .3s, color .3s;
           &:hover {
-            background-color: #372120;
-            border-color: #372120;
+            background-color: $colorBrown;
+            border-color: $colorBrown;
             color: #fff;
           }
         }
@@ -165,7 +165,7 @@
           a {
             border-left: 1px solid #B5A9A3;
             &:hover {
-              border-left: 1px solid #372120;
+              border-left: 1px solid $colorBrown;
             }
           }
         }
