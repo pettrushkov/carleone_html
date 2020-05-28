@@ -32,6 +32,7 @@
     background-color: #E4E4E4;
     color: $colorBrown;
     border: 2px solid $colorBrown;
+    border-bottom-width: 1px;
     text-align: center;
     span {
       display: block;
@@ -69,6 +70,10 @@
       font-family: $fontRobotoBold;
       font-size: 18px;
       line-height: 21px;
+      &:hover {
+        background-color: #502D2B !important;
+        color: #fff;
+      }
     }
   }
 }
