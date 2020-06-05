@@ -65,11 +65,12 @@
       height: 122px;
     }
     input[type="submit"] {
-      margin-top: 32px;
+      margin: 32px auto 0;
       border: none;
       font-family: $fontRobotoBold;
       font-size: 18px;
       line-height: 21px;
+      max-width: 210px;
       &:hover {
         background-color: #502D2B !important;
         color: #fff;
@@ -352,7 +353,7 @@
 }
 
 .brands {
-  padding: 60px 0 73px;
+  padding: 60px 0 123px;
   background-color: #fff;
   text-align: center;
   font-size: 18px;
@@ -381,6 +382,331 @@
       p {
         margin-top: 10px;
       }
+    }
+  }
+}
+
+.selection {
+  padding: 202px 0 132px;
+  background-color: #fff;
+  &--overlay {
+    max-width: 932px;
+    margin-left: auto;
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: " ";
+      display: block;
+      width: 782px;
+      height: 607px;
+      background-image: url(../img/elements/bg-tesla-usa.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: -106px;
+      left: -432px;
+      z-index: -1;
+    }
+  }
+  &__title {
+    padding: 47px 100px 37px;
+    font-family: $fontRobotoBlack;
+    font-size: 30px;
+    line-height: 40px;
+    background-color: #F7D504;
+    color: $colorBrown;
+    text-align: center;
+  }
+  form {
+    padding: 38px 53px 44px 60px;
+    background-color: #EDEAE4;
+    label {
+      display: block;
+      span {
+        color: $colorBrown;
+        line-height: 19px;
+        font-family: $fontRobotoMedium;
+      }
+    }
+    input, .nice-select {
+      display: block;
+      width: 100%;
+      padding: 0 15px;
+      height: 54px;
+      background-color: #fff;
+      border: 1px solid #B5A9A3;
+    }
+    .nice-select {
+      display: block;
+      width: 100%;
+      margin-bottom: 16px;
+      background-color: #F7F7F7;
+      border: 1px solid #B5A9A3;
+      font-family: $fontRobotoMedium;
+      font-size: 20px;
+      line-height: 23px;
+      color: #000000;
+      border-radius: 0;
+      height: 54px;
+      padding: 0 20px;
+      .current {
+        position: relative;
+        top: 14px;
+      }
+      &::after {
+        background-image: url(../img/elements/arrow-bottom-yellow.svg);
+        width: 11px;
+        height: 7px;
+        border: none;
+        transform: none;
+      }
+      &.open::after {
+        transform: rotate(180deg);
+        right: 16px;
+      }
+    }
+    input[type="submit"] {
+      margin: 32px auto 0;
+      border: none;
+      font-family: $fontRobotoBold;
+      font-size: 18px;
+      line-height: 21px;
+      max-width: 210px;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  &__footnote {
+    margin-top: 103px;
+    max-width: 903px;
+    position: relative;
+    &::after {
+      content: " ";
+      display: block;
+      width: 417px;
+      height: 250px;
+      background-image: url(../img/elements/bg-bwm-usa.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      right: -411px;
+      top: -54px;
+    }
+    .title {
+      font-family: $fontRobotoBold;
+      color: $colorBrown;
+      font-size: 30px;
+      line-height: 35px;
+    }
+    .description {
+      margin-top: 13px;
+      line-height: 19px;
+      font-family: $fontRobotoLight;
+    }
+  }
+}
+
+.main-office {
+  background-color: #EDEAE4;
+  padding: 83px 0 81px;
+  .section-title {
+    margin-bottom: 41px;
+    text-align: left;
+  }
+  &__call {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+      font-family: $fontRobotoBold;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      span {
+        display: block;
+        font-size: 12px;
+        line-height: 14px;
+      }
+      &:not(.btn) {
+        position: relative;
+        &::before {
+          content: " ";
+          display: block;
+          width: 20px;
+          height: 20px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-image: url(../img/elements/icon-phone-brown.svg);
+          position: absolute;
+          left: -23px;
+          top: 4px;
+        }
+      }
+    }
+    .btn {
+      margin-top: 12px;
+      font-family: $fontRobotoMedium;
+      font-size: 16px;
+      line-height: 19px;
+      text-transform: initial;
+    }
+  }
+  &__shedule {
+    padding-left: 44px;
+    .title {
+      font-family: $fontRobotoLight;
+      font-size: 16px;
+      line-height: 19px;
+      color: $colorBrown;
+      margin-bottom: 11px;
+      position: relative;
+      &::before {
+        content: " ";
+        display: block;
+        width: 22px;
+        height: 22px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(../img/elements/icon-clock-brown.svg);
+        position: absolute;
+        left: -29px;
+        top: -2px;
+      }
+    }
+    span {
+      display: block;
+      font-family: $fontRobotoMedium;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+  &__email {
+    margin-top: 20px;
+    display: block;
+    position: relative;
+    color: #0078BC;
+    padding-left: 29px;
+    text-decoration-line: underline;
+    line-height: 19px;
+    &:hover {
+      text-decoration: none;
+      color: #0078BC;
+    }
+    &::before {
+      content: " ";
+      display: block;
+      width: 23px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../img/elements/icon-email-brown.svg);
+      position: absolute;
+      left: 0;
+      top: 1px;
+    }
+  }
+  &__address {
+    position: relative;
+    font-family: $fontRobotoMedium;
+    line-height: 19px;
+    margin-top: 33px;
+    padding-left: 29px;
+    span {
+      display: block;
+      font-family: $fontRobotoLight;
+      font-size: 16px;
+      line-height: 19px;
+      color: $colorBrown;
+      margin-bottom: 7px;
+    }
+    &::before {
+      content: " ";
+      display: block;
+      width: 18px;
+      height: 23px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../img/elements/icon-marker-brown.svg);
+      position: absolute;
+      left: 0;
+      top: 1px;
+    }
+  }
+  &__map {
+    height: 364px;
+    border: 4px solid #fff;
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.contact {
+  padding: 135px 0 140px;
+  background-color: #fff;
+  .row {
+    margin-top: 39px;
+  }
+  &__item {
+    background-color: $colorYellow;
+    padding: 18px 15px;
+    text-align: center;
+    min-height: 154px;
+    .image-block {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    .title {
+      margin-top: 12px;
+      font-family: $fontRobotoMedium;
+      font-size: 18px;
+      line-height: 21px;
+    }
+    a {
+      display: inline-block;
+      margin-top: 11px;
+      font-size: 24px;
+      line-height: 28px;
+      font-family: $fontRobotoBold;
+      span {
+        display: block;
+        font-size: 12px;
+        line-height: 14px;
+        font-family: $fontRobotoRegular;
+      }
+    }
+  }
+  form {
+    label {
+      display: block;
+      span {
+        display: block;
+        font-family: $fontRobotoMedium;
+        font-size: 16px;
+        line-height: 19px;
+        color: #372120;
+        margin-bottom: 6px;
+      }
+      input, textarea {
+        display: block;
+        width: 100%;
+        padding: 10px 12px;
+        background-color: #F6F6F6;
+        border: 1px solid #B5A9A3;
+        margin-bottom: 10px;
+      }
+    }
+    input[type="submit"] {
+      display: block;
+      margin: 30px auto 0;
+      padding: 19px 33px;
     }
   }
 }

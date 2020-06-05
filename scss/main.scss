@@ -66,3 +66,20 @@ a {
     }
   }
 }
+
+.section-title {
+  font-family: $fontRobotoBlack;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  color: $colorBrown;
+  text-transform: uppercase;
+}
+
+.section-description {
+  margin-top: 11px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  text-align: center;
+}

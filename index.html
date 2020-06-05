@@ -572,11 +572,125 @@
     </div>
   </section>
 
+  <section class="selection">
+    <div class="container">
+      <div class="selection--overlay">
+        <p class="selection__title">НАШИ СПЕЦИАЛИСТЫ СДЕЛАЮТ ПОДБОРКУ СПЕЦИАЛЬНО ДЛЯ ВАС!</p>
+        <form action="#">
+          <div class="row">
+            <div class="col-4">
+              <label>
+                <span>Тип</span>
+                <select name="selection_type">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">4</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+              </label>
+              <label>
+            </div>
+            <div class="col-4">
+              <label>
+                <span>Год от:</span>
+                <select name="year_of">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+              </label>
+              <label>
+            </div>
+            <div class="col-4">
+              <label>
+                <span>Год до:</span>
+                <select name="year_to">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+              </label>
+              <label>
+            </div>
+            <div class="col-4">
+              <label>
+                <span>Стоимость</span>
+                <select name="year_price">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+              </label>
+              <label>
+            </div>
+            <div class="col-4">
+              <label>
+                <span>Имя</span>
+                <input type="text" placeholder="__">
+              </label>
+            </div>
+            <div class="col-4">
+              <label>
+                <span>Телефон</span>
+                <input type="tel" placeholder="+38 (0      ) -________ - ____ - ____">
+              </label>
+            </div>
+          </div>
+          <input type="submit" value="ОТПРАВИТЬ" class="btn btn--brown">
+        </form>
+      </div>
+      <div class="selection__footnote">
+        <p class="title">Авто из США</p>
+        <p class="description">Авто из США в Украине со вторичного рынка не являются редкостью. Однако поставленных из США пока не так много, как отечественных и проданных в официальных автосалонах. Если удастся найти подходящий вариант, то часто машина из США стоит дорого при растаможке. Это делает покупку транспорта уже менее целесообразной.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="main-office">
+    <div class="container">
+      <div class="row">
+        <div class="col-5">
+          <h2 class="section-title">главный офис в Киеве</h2>
+          <div class="row">
+            <div class="col-6 main-office__shedule">
+              <p class="title">График работы:</p>
+              <span>По будням 10:00 - 19:00</span>
+              <span>Суббота 1:00 - 15:00</span>
+              <span>Воскресенье - выходной</span>
+            </div>
+            <div class="col-6 main-office__call">
+              <a href="tel:+380 800 211 585">0 800 211 585<span>звонки по Украине бесплатно</span></a> 
+              <a href="#" class="btn btn--yellow callback">Заказать обратный звонок</a>
+            </div>
+          </div>
+          <a href="mailto:Support@carleone.com.ua" class="main-office__email">Support@carleone.com.ua</a>
+          <p class="main-office__address"><span>Адрес:</span>Проспект Валерия Лобановского, 56<br>БЦ Star Centre</p>
+        </div>
+        <div class="col-7">
+          <div class="main-office__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.2336424466966!2d30.474055415797995!3d50.41811837947095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cece4fc55555%3A0x40d37f22805353de!2zU3RhciBDZW50ZXIg0JHQpg!5e0!3m2!1sru!2sua!4v1591358651081!5m2!1sru!2sua" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="contact">
     <div class="container">
       <div class="contact--overlay">
-        <h2 class="contact__title">СВЯЖИТЕСЬ С НАМИ</h2>
-        <p class="contact__description">Мы с радостью ответим на все ваши вопросы</p>
+        <h2 class="section-title">СВЯЖИТЕСЬ С НАМИ</h2>
+        <p class="section-description">Мы с радостью ответим на все ваши вопросы</p>
         <div class="row">
           <div class="col-6">
             <div class="contact__item">
@@ -586,6 +700,8 @@
               <p class="title">ТЕЛЕФОН КИЕВ, ОДЕССА, ХАРЬКОВ</p>
               <a href="tel:+380800211585" class="phone">0 800 211 585<span>звонки по Украине бесплатно</span></a>
             </div>
+          </div>
+          <div class="col-6">
             <div class="contact__item">
               <div class="image-block">
                 <img src="./img/elements/email-icon.svg" alt="">
@@ -618,9 +734,7 @@
             <div class="col-12">
               <label>
                 <span>Сообщение</span>
-                <textarea>
-                  
-                </textarea>
+                <textarea></textarea>
               </label>
             </div>
           </div>
