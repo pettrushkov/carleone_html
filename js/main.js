@@ -25,6 +25,14 @@ jQuery(document).ready(function($) {
     nextArrow: $('.reviews__buttons--youtube-next')
   });
 
+  $('.says__slider').slick({
+    arrows: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    prevArrow: $('.says__buttons-prev'),
+    nextArrow: $('.says__buttons-next')
+  });
+
   $('.cars__tabs .tab').click(function() {
     $(this).siblings().removeClass('active');
     $(this).addClass('active');

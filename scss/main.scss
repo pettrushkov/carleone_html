@@ -74,6 +74,9 @@ a {
   text-align: center;
   color: $colorBrown;
   text-transform: uppercase;
+  &--white {
+    color: #fff;
+  }
 }
 
 .section-description {
