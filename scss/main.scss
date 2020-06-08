@@ -30,6 +30,9 @@ html {
 body {
   font-family: $fontRobotoRegular;
   font-size: 16px;
+  &.sticky {
+    padding-top: 60px;
+  }
 }
 
 a {

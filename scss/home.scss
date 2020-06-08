@@ -494,7 +494,7 @@
       border-top: 1px solid #B5A9A3;
       border-left: 1px solid #B5A9A3;
       overflow: hidden;
-      li {
+      a {
         display: flex;
         justify-content: space-between;
         line-height: 19px;
@@ -510,6 +510,11 @@
           position: absolute;
           bottom: -1px;
           left: -16px;
+        }
+        &:hover {
+          span {
+            color: #00489C;
+          }
         }
         div {
           width: 50%;
@@ -532,13 +537,10 @@
           &:nth-child(2) {
             text-align: right;
           }
-          a {
+          span {
             font-family: $fontRobotoMedium;
             color: $colorBrown;
             text-decoration: underline;
-            &:hover {
-              color: #00489C;
-            }
           }
           p {
             text-align: right;
@@ -1481,6 +1483,38 @@
       display: block;
       width: 100%;
       height: 100%;
+    }
+  }
+  .telegram-subscribe {
+    display: block;
+    margin-top: 20px;
+    padding-left: 62px;
+    position: relative;
+    &::before {
+      content: " ";
+      display: block;
+      width: 50px;
+      height: 50px;
+      background-color: #0078BC;
+      position: absolute;
+      background-image: url(../img/elements/telegram-white-icon.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      top: 0;
+      left: 0;
+    }
+    .title {
+      font-family: $fontRobotoMedium;
+      font-size: 24px;
+      line-height: 30px;
+      color: $colorBrown;
+      span {
+        font-family: $fontRobotoBold;
+        font-size: 24px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #0078BC;
+      }
     }
   }
 }

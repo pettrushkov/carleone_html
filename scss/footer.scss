@@ -23,8 +23,8 @@
         line-height: 19px;
         text-transform: uppercase;
         padding: 17px 66px 14px 40px;
-        border: 1px solid #B5A9A3;
-        background-color: #EDEAE4;
+        border: 1px solid #b5a9a3;
+        background-color: #edeae4;
         position: relative;
         &::after {
           content: " ";
@@ -45,8 +45,14 @@
             background-image: url(../img/elements/instagram-black-icon.svg);
           }
           &:hover {
-            border-color: rgba(193,47,147,0.75);
-            background: linear-gradient(135deg, rgba(75,100,212,1) 0%, rgba(193,47,147,1) 33%, rgba(246,114,47,1) 66%, rgba(255,223,134,1) 100%);
+            border-color: rgba(193, 47, 147, 0.75);
+            background: linear-gradient(
+              135deg,
+              rgba(75, 100, 212, 1) 0%,
+              rgba(193, 47, 147, 1) 33%,
+              rgba(246, 114, 47, 1) 66%,
+              rgba(255, 223, 134, 1) 100%
+            );
             &::after {
               background-image: url(../img/elements/instagram-white-icon.svg);
             }
@@ -93,8 +99,8 @@
             background-image: url(../img/elements/viber-black-icon.svg);
           }
           &:hover {
-            border-color: #665CAC;
-            background-color: #665CAC;
+            border-color: #665cac;
+            background-color: #665cac;
             &::after {
               background-image: url(../img/elements/viber-white-icon.svg);
             }
@@ -120,7 +126,7 @@
         margin-top: 12px;
       }
       a {
-        transition: color .3s;
+        transition: color 0.3s;
         &:hover {
           color: $colorYellow;
         }
@@ -156,6 +162,37 @@
     span {
       display: block;
       line-height: 20px;
+    }
+  }
+}
+
+#scrollToTop {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: $colorBrown;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/elements/icon-scroll-top.svg");
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s;
+  z-index: 1;
+  cursor: pointer;
+  @include mediaw(768px) {
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+  }
+  &.show {
+    visibility: visible;
+    opacity: 0.75;
+    &:hover {
+      opacity: 1;
     }
   }
 }
