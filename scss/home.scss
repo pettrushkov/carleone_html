@@ -148,6 +148,9 @@
         transform: rotate(180deg);
         right: 16px;
       }
+      .list {
+        width: 100%;
+      }
     }
     div {
       position: relative;
@@ -366,6 +369,7 @@
       width: 12.5%;
       margin-bottom: 50px;
       padding: 0 15px;
+      display: block;
       .image-block {
         height: 66px;
         display: flex;
@@ -648,6 +652,7 @@
     padding: 16px 15px 33px;
     text-align: center;
     transition: border-color .3s;
+    background-color: #fff;
     &:hover {
       border-color: #372120;
       .image-block {
@@ -657,7 +662,7 @@
     .image-block {
       width: 80px;
       height: 80px;
-      background-color: #EDC939;
+      background-color: $colorYellow;
       display: inline-block;
       transition: background-color .3s;
       background-repeat: no-repeat;
@@ -687,105 +692,105 @@
     }
     &:first-child {
       .image-block {
-        background-image: url(../img/elements/steps1-black.svg);
+        background-image: url(../img/elements/steps1-white.svg);
         &::before {
           content: "1";
         }
       }
       &:hover {
         .image-block {
-          background-image: url(../img/elements/steps1-white.svg);
+          background-image: url(../img/elements/steps1-black.svg);
         }
       }
     }
     &:nth-child(2) {
       .image-block {
-        background-image: url(../img/elements/steps2-black.svg);
+        background-image: url(../img/elements/steps2-white.svg);
         &::before {
           content: "2";
         }
       }
       &:hover {
         .image-block {
-          background-image: url(../img/elements/steps2-white.svg);
+          background-image: url(../img/elements/steps2-black.svg);
         }
       }
     }
     &:nth-child(3) {
       .image-block {
-        background-image: url(../img/elements/steps3-black.svg);
+        background-image: url(../img/elements/steps3-white.svg);
         &::before {
           content: "3";
         }
       }
       &:hover {
         .image-block {
-          background-image: url(../img/elements/steps3-white.svg);
+          background-image: url(../img/elements/steps3-black.svg);
         }
       }
     }
     &:nth-child(4) {
       .image-block {
-        background-image: url(../img/elements/steps4-black.svg);
+        background-image: url(../img/elements/steps4-white.svg);
         &::before {
           content: "4";
         }
       }
       &:hover {
         .image-block {
-          background-image: url(../img/elements/steps4-white.svg);
+          background-image: url(../img/elements/steps4-black.svg);
         }
       }
     }
     &:nth-child(5) {
       .image-block {
-        background-image: url(../img/elements/steps5-black.svg);
+        background-image: url(../img/elements/steps5-white.svg);
         &::before {
           content: "5";
         }
       }
       &:hover {
         .image-block {
-          background-image: url(../img/elements/steps5-white.svg);
+          background-image: url(../img/elements/steps5-black.svg);
         }
       }
     }
     &:nth-child(6) {
       .image-block {
-        background-image: url(../img/elements/steps6-black.svg);
+        background-image: url(../img/elements/steps6-white.svg);
         &::before {
           content: "6";
         }
       }
       &:hover {
         .image-block {
-          background-image: url(../img/elements/steps6-white.svg);
+          background-image: url(../img/elements/steps6-black.svg);
         }
       }
     }
     &:nth-child(7) {
       .image-block {
-        background-image: url(../img/elements/steps7-black.svg);
+        background-image: url(../img/elements/steps7-white.svg);
         &::before {
           content: "7";
         }
       }
       &:hover {
         .image-block {
-          background-image: url(../img/elements/steps7-white.svg);
+          background-image: url(../img/elements/steps7-black.svg);
         }
       }
     }
     &:nth-child(8) {
       .image-block {
-        background-image: url(../img/elements/steps8-black.svg);
+        background-image: url(../img/elements/steps8-white.svg);
         &::before {
           content: "8";
         }
       }
       &:hover {
         .image-block {
-          background-image: url(../img/elements/steps8-white.svg);
+          background-image: url(../img/elements/steps8-black.svg);
         }
       }
     }
@@ -1334,6 +1339,11 @@
       margin-top: 13px;
       line-height: 19px;
       font-family: $fontRobotoLight;
+      max-height: 57px;
+      overflow: auto;
+      &::-webkit-scrollbar { 
+        display: none; 
+      }
     }
   }
 }
@@ -1480,6 +1490,10 @@
   background-color: #fff;
   .row {
     margin-top: 39px;
+  }
+  &--overlay {
+    max-width: 952px;
+    margin: 0 auto;
   }
   &__item {
     background-color: $colorYellow;

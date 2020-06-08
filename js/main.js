@@ -5,6 +5,8 @@ jQuery(document).ready(function($) {
   $('.banner__slider').slick({
     arrows: true,
     dots: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
     prevArrow: $('.banner__buttons-prev'),
     nextArrow: $('.banner__buttons-next')
   });
@@ -41,6 +43,10 @@ jQuery(document).ready(function($) {
   });
 
   $('.top10__question').click(function() {
+    if($(this).parent().siblings().hasClass('active')) {
+      $('.top10__item.active .top10__answer').not($(this)).slideUp();
+      $('.top10__item.active').not($(this)).removeClass('active');
+    }
     $(this).parent().toggleClass('active');
     $(this).next().slideToggle();
   });
