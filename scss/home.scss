@@ -32,6 +32,10 @@
 .quick-order {
   background-color: #F8F7F4;
   padding-top: 30px;
+  @include mediaw(576px) {
+    padding-top: 0;
+    background-color: #fff;
+  }
   &--overlay {
     max-width: 706px;
     margin: 0 auto;
@@ -46,6 +50,13 @@
     border: 2px solid $colorBrown;
     border-bottom-width: 1px;
     text-align: center;
+    @include mediaw(576px) {
+      font-size: 21px;
+      line-height: 24px;
+      border: none;
+      padding: 25px 20px 10px;
+      background-color: #F8F7F4;
+    }
     span {
       display: block;
       margin-top: 7px;
@@ -53,16 +64,26 @@
       font-size: 20px;
       line-height: 23px;
       color: #000;
+      @include mediaw(576px) {
+        font-size: 14px;
+        line-height: 16px;
+      }
     }
   }
   form {
     border: 1px solid $colorBrown;
     padding: 26px 85px 40px;
     background-color: $colorYellow;
+    @include mediaw(576px) {
+      padding: 6px 13px 23px;
+    }
     label {
       display: block;
       &:not(:first-child) {
         margin-top: 9px;
+        @include mediaw(576px) {
+          margin-top: 3px;
+        }
       }
     }
     input, textarea {
@@ -72,9 +93,15 @@
       height: 56px;
       background-color: #F6F6F6;
       border: 1px solid #B5A9A3;
+      @include mediaw(576px) {
+        height: 48px;
+      }
     }
     textarea {
       height: 122px;
+      @include mediaw(576px) {
+        height: 74px;
+      }
     }
     input[type="submit"] {
       margin: 32px auto 0;
@@ -83,6 +110,10 @@
       font-size: 18px;
       line-height: 21px;
       max-width: 210px;
+      @include mediaw(576px) {
+        margin: 15px auto 0;
+        max-width: 176px;
+      }
       &:hover {
         background-color: #502D2B !important;
         color: #fff;
@@ -97,6 +128,10 @@
   &--overlay {
     border: 2px solid #372120;
     padding-bottom: 47px;
+    @include mediaw(576px) {
+      padding-bottom: 22px;
+      border-width: 1px;
+    }
   }
   &__title {
     display: flex;
@@ -107,6 +142,13 @@
     font-size: 30px;
     line-height: 35px;
     padding: 29px 10px 27px;
+    @include mediaw(576px) {
+      display: block;
+      font-family: $fontRobotoMedium;
+      font-size: 18px;
+      line-height: 21px;
+      padding-left: 60px;
+    }
     p {
       position: relative;
       transform: translateX(30px);
@@ -120,6 +162,12 @@
         position: absolute;
         top: -15px;
         left: -64px;
+        @include mediaw(576px) {
+          width: 34px;
+          height: 34px;
+          top: 2px;
+          left: -50px;
+        }
       }
     }
   }
@@ -129,9 +177,23 @@
     line-height: 21px;
     color: $colorBrown;
     text-align: center;
+    @include mediaw(576px) {
+      font-size: 14px;
+      line-height: 16px;
+      margin: 12px 0 11px;
+    }
   }
   form {
     max-width: 720px;
+    @include mediaw(991px) {
+      max-width: 500px;
+    }
+    @include mediaw(767px) {
+      max-width: 360px;
+    }
+    @include mediaw(576px) {
+      margin: 0 14px;
+    }
     margin: 0 auto;
     .nice-select {
       display: block;
@@ -145,9 +207,16 @@
       border-radius: 0;
       height: 54px;
       padding: 0 20px;
+      @include mediaw(576px) {
+        height: 48px;
+        margin-bottom: 21px;
+      }
       .current {
         position: relative;
         top: 14px;
+        @include mediaw(576px) {
+          top: 12px;
+        }
       }
       &::after {
         background-image: url(../img/elements/arrow-bottom-yellow.svg);
@@ -174,6 +243,13 @@
         font-size: 18px;
         line-height: 21px;
         color: #000000;
+        @include mediaw(576px) {
+          top: -17px;
+          left: 0;
+          transform: initial;
+          font-size: 14px;
+          line-height: 16px;
+        }
       }
     }
     input[type="submit"] {
@@ -184,6 +260,9 @@
       font-size: 16px;
       line-height: 19px;
       font-family: $fontRobotoMedium;
+      @include mediaw(576px) {
+        width: 176px;
+      }
     }
   }
 }
@@ -191,14 +270,34 @@
 .banner {
   position: relative;
   overflow: hidden;
+  @include mediaw(576px) {
+    overflow: visible;
+  }
+  &__slide {
+    img {
+      @include mediaw(576px) {
+        height: 185px;
+        object-fit: cover;
+      }
+    }
+  }
   &__slider {
     .slick-dots {
       bottom: 27px;
+      @include mediaw(576px) {
+        bottom: -28px;
+      }
       li {
+        @include mediaw(576px) {
+          margin: 0;
+        }
         &.slick-active {
           button {
             &::before {
               color: #372B20;
+              @include mediaw(576px) {
+                color: $colorBrown;
+              }
             }
           }
         }
@@ -207,6 +306,10 @@
             font-size: 12px;
             color: #fff;
             opacity: 1;
+            @include mediaw(576px) {
+              color: #EDEAE4;
+              font-size: 6px;
+            }
           }
         }
       }
@@ -221,6 +324,10 @@
     bottom: -22px;
     left: 50%;
     transform: translateX(-50%);
+    @include mediaw(576px) {
+      width: 100%;
+      height: 100%;
+    }
     .banner__buttons-prev, .banner__buttons-next {
       width: 50px;
       height: 50px;
@@ -233,6 +340,13 @@
       transition: box-shadow .3s;
       position: relative;
       top: -37px;
+      @include mediaw(576px) {
+        width: 36px;
+        height: 36px;
+        background-size: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
       &:hover {
         box-shadow: 2px 4px 4px rgba(55, 33, 32, 0.08);
       }
@@ -249,6 +363,9 @@
 .cars {
   padding: 120px 0 60px;
   background-color: #fff;
+  @include mediaw(576px) {
+    padding: 45px 0 24px;
+  }
   &__tab {
     display: none;
     &.active {
@@ -257,7 +374,11 @@
   }
   &__tabs {
     display: flex;
+    justify-content: center;
     margin-bottom: 11px;
+    @include mediaw(991px) {
+      flex-wrap: wrap;
+    }
     .tab {
       display: block;
       padding: 22px 42.453px;
@@ -271,6 +392,15 @@
       border-left: none;
       transition: background-color .3s, border-color .3s, color .3s;
       cursor: pointer;
+      @include mediaw(1325px) {
+        padding: 22px 30px;
+      }
+      @include mediaw(1199px) {
+        padding: 22px 10px;
+      }
+      @include mediaw(576px) {
+        width: 100%;
+      }
       &:hover, &.active {
         background-color: $colorBrown;
         border-color: $colorBrown;
@@ -287,10 +417,16 @@
   }
   .car {
     margin-top: 37px;
+    @include mediaw(576px) {
+      margin-top: 26px;
+    }
     .image-block {
       width: 100%;
       height: 217px;
       border: 1px solid #372120;
+      @include mediaw(576px) {
+        height: 200px;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -304,6 +440,9 @@
       font-size: 16px;
       line-height: 19px;
       font-family: $fontRobotoMedium;
+      @include mediaw(576px) {
+        padding: 9px 0 13px;
+      }
       .title {
         color: #000000;
         max-width: 205px;
@@ -364,6 +503,10 @@
     left: 50%;
     transform: translateX(-50%);
     padding: 19px 59px;
+    @include mediaw(576px) {
+      margin-top: 20px;
+      padding: 13px 33px;
+    }
   }
 }
 
@@ -374,6 +517,9 @@
   font-size: 18px;
   line-height: 21px;
   color: #0078BC;
+  @include mediaw(576px) {
+    display: none;
+  }
   &__row {
     display: flex;
     flex-wrap: wrap;
@@ -382,6 +528,12 @@
       margin-bottom: 50px;
       padding: 0 15px;
       display: block;
+      @include mediaw(991px) {
+        width: 20%;
+      }
+      @include mediaw(767px) {
+        width: 33.3334%;
+      }
       .image-block {
         height: 66px;
         display: flex;
@@ -403,10 +555,17 @@
 }
 
 .numbers {
+  @include mediaw(576px) {
+    display: none;
+  }
   &__header {
     display: flex;
     justify-content: space-between;
     background-color: rgba(237, 234, 228, 0.4);
+    @include mediaw(767px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     .left {
       .tabs {
         display: flex;
@@ -423,6 +582,9 @@
           border-left: none;
           transition: background-color .3s, border-color .3s, color .3s;
           cursor: pointer;
+          @include mediaw(1199px) {
+            padding: 18px;
+          }
           &:hover {
             background-color: $colorBrown;
             border-color: $colorBrown;
@@ -457,6 +619,9 @@
           background-color: #FFFFFF;
           border: 1px solid #B5A9A3;
           padding: 5px 55px 5px 20px;
+          @include mediaw(1199px) {
+            width: 345px;
+          }
           &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
             font-family: $fontRobotoLight;
             line-height: 19px;
@@ -506,6 +671,12 @@
       border-top: 1px solid #B5A9A3;
       border-left: 1px solid #B5A9A3;
       overflow: hidden;
+      @include mediaw(991px) {
+        columns: 3;
+      }
+      @include mediaw(768px) {
+        columns: 2;
+      }
       a {
         display: flex;
         justify-content: space-between;
@@ -566,10 +737,16 @@
 .says {
   padding: 133px 0 85px;
   background-color: #fff;
+  @include mediaw(576px) {
+    padding: 24px 0 32px;
+  }
   &__slider--overlay {
     margin-top: 40px;
     position: relative;
     padding: 1px;
+    @include mediaw(576px) {
+      margin-top: 14px;
+    }
   }
   .says__buttons {
     width: 100%;
@@ -579,6 +756,9 @@
     position: absolute;
     left: 0;
     top: 0;
+    @include mediaw(1199px) {
+      height: 100%;
+    }
     .says__buttons-prev, .says__buttons-next {
       width: 50px;
       height: 50px;
@@ -592,6 +772,15 @@
       position: relative;
       z-index: 1;
       top: 175px;
+      @include mediaw(1199px) {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      @include mediaw(576px) {
+        width: 36px;
+        height: 36px;
+        background-size: 15px;
+      }
       &:hover {
         box-shadow: 2px 4px 4px rgba(55, 33, 32, 0.08);
       }
@@ -599,10 +788,16 @@
     .says__buttons-prev {
       background-image: url(../img/elements/arrow-left-brown.svg);
       left: -25px;
+      @include mediaw(576px) {
+        left: -15px;
+      }
     }
     .says__buttons-next {
       background-image: url(../img/elements/arrow-right-brown.svg);
       right: -25px;
+      @include mediaw(576px) {
+        right: -15px;
+      }
     }
   }
   &__slider {
@@ -658,8 +853,14 @@
 .steps {
   padding: 85px 0 142px;
   background-color: #fff;
+  @include mediaw(576px) {
+    padding: 32px 0 23px;
+  }
   .row {
     margin-top: 45px;
+    @include mediaw(576px) {
+      margin-top: 0;
+    }
   }
   &__item {
     border: 1px solid #EDEAE4;
@@ -667,8 +868,30 @@
     text-align: center;
     transition: border-color .3s;
     background-color: #fff;
+    @include mediaw(576px) {
+      position: relative;
+      background-color: #F6F6F6;
+      display: flex;
+      margin: 0 15px;
+      padding-left: 40px;
+      padding-top: 60px;
+      align-items: flex-start;
+      border: 1px solid #B5A9A3;
+      margin-top: 20px;
+    }
+    &:nth-child(2n) {
+      @include mediaw(576px) {
+        .title {
+          background-color: $colorBrown;
+          color: #fff;
+        }
+      }
+    }
     &:hover {
       border-color: #372120;
+      @include mediaw(576px) {
+        border-color: #B5A9A3;
+      }
       .image-block {
         background-color: $colorBrown;
       }
@@ -682,6 +905,11 @@
       background-repeat: no-repeat;
       background-position: center;
       position: relative;
+      @include mediaw(576px) {
+        width: 54px;
+        height: 54px;
+        background-size: 55px;
+      }
       &::before {
         position: absolute;
         left: -60px;
@@ -691,6 +919,12 @@
         line-height: 112px;
         color: #fff;
         text-shadow: rgb(181, 169, 163) 1px 0px 0px, rgb(181, 169, 163) 0.540302px 0.841471px 0px, rgb(181, 169, 163) -0.416147px 0.909297px 0px, rgb(181, 169, 163) -0.989992px 0.14112px 0px, rgb(181, 169, 163) -0.653644px -0.756802px 0px, rgb(181, 169, 163) 0.283662px -0.958924px 0px, rgb(181, 169, 163) 0.96017px -0.279415px 0px;
+        @include mediaw(576px) {
+          font-size: 65px;
+          line-height: 76px;
+          left: -40px;
+          top: -9px;
+        }
       }
     }
     .title {
@@ -699,10 +933,31 @@
       line-height: 21px;
       font-family: $fontRobotoBold;
       color: $colorBrown;
+      @include mediaw(576px) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+        line-height: 19px;
+        margin: 0;
+        background-color: $colorYellow;
+      }
     }
     .description {
       margin-top: 9px;
       line-height: 20px;
+      @include mediaw(576px) {
+        margin-top: 0;
+        font-size: 14px;
+        line-height: 16px;
+        font-family: $fontRobotoLight;
+        margin-left: 8px;
+        text-align: left;
+        max-width: 192px;
+      }
     }
     &:first-child {
       .image-block {
@@ -714,12 +969,18 @@
       &:hover {
         .image-block {
           background-image: url(../img/elements/steps1-black.svg);
+          @include mediaw(576px) {
+            background-image: url(../img/elements/steps1-white.svg);
+          }
         }
       }
     }
     &:nth-child(2) {
       .image-block {
         background-image: url(../img/elements/steps2-white.svg);
+        @include mediaw(576px) {
+          background-image: url(../img/elements/steps2-black.svg);
+        }
         &::before {
           content: "2";
         }
@@ -740,12 +1001,18 @@
       &:hover {
         .image-block {
           background-image: url(../img/elements/steps3-black.svg);
+          @include mediaw(576px) {
+            background-image: url(../img/elements/steps3-black.svg);
+          }
         }
       }
     }
     &:nth-child(4) {
       .image-block {
         background-image: url(../img/elements/steps4-white.svg);
+        @include mediaw(576px) {
+          background-image: url(../img/elements/steps4-black.svg);
+        }
         &::before {
           content: "4";
         }
@@ -766,12 +1033,18 @@
       &:hover {
         .image-block {
           background-image: url(../img/elements/steps5-black.svg);
+          @include mediaw(576px) {
+            background-image: url(../img/elements/steps5-white.svg);
+          }
         }
       }
     }
     &:nth-child(6) {
       .image-block {
         background-image: url(../img/elements/steps6-white.svg);
+        @include mediaw(576px) {
+          background-image: url(../img/elements/steps6-black.svg);
+        }
         &::before {
           content: "6";
         }
@@ -792,12 +1065,18 @@
       &:hover {
         .image-block {
           background-image: url(../img/elements/steps7-black.svg);
+          @include mediaw(576px) {
+            background-image: url(../img/elements/steps7-white.svg);
+          }
         }
       }
     }
     &:nth-child(8) {
       .image-block {
         background-image: url(../img/elements/steps8-white.svg);
+        @include mediaw(576px) {
+          background-image: url(../img/elements/steps8-black.svg);
+        }
         &::before {
           content: "8";
         }
@@ -816,30 +1095,58 @@
   background-color: $colorBrown;
   background-image: url(../img/elements/bg-why.png);
   background-size: cover;
+  @include mediaw(576px) {
+    background-image: none;
+    background-color: #372120;
+    padding: 22px 0 69px;
+  }
   .section-title {
     padding: 0 15px;
+    @include mediaw(576px) {
+      margin-bottom: 41px;
+      color: #EDC939;
+    }
   }
   .container {
-    background: rgba(55, 33, 32, 0.9);
+    background-color: rgba(55, 33, 32, 0.9);
     margin-top: 49px;
     padding-bottom: 32px;
+    @include mediaw(576px) {
+      margin-top: initial;
+      background-color: transparent;
+      padding-bottom: initial;
+    }
   }
   &__item {
     margin-top: 31px;
     color: #fff;
+    @include mediaw(576px) {
+      margin-top: 12px;
+      text-align: center;
+    }
     &-image {
       text-align: right;
       margin-top: 10px;
+      @include mediaw(576px) {
+        margin-top: initial;
+        text-align: center;
+      }
     }
     .why__title {
       font-family: $fontRobotoBold;
       font-size: 20px;
       line-height: 23px;
+      @include mediaw(576px) {
+        margin-top: 13px;
+      }
     }
     .why__description {
       margin-top: 9px;
       font-family: $fontRobotoLight;
       line-height: 19px;
+      @include mediaw(576px) {
+        margin-top: 11px;
+      }
     }
   }
 }
@@ -847,6 +1154,9 @@
 .reviews {
   background-color: #fff;
   padding: 133px 0 141px;
+  @include mediaw(576px) {
+    margin-top: 23px 0 51px;
+  }
   text-align: center;
   .section-description {
     margin-top: 11px;

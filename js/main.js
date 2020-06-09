@@ -42,7 +42,15 @@ jQuery(document).ready(function ($) {
     slidesToShow: 2,
     slidesToScroll: 1,
     prevArrow: $('.says__buttons-prev'),
-    nextArrow: $('.says__buttons-next')
+    nextArrow: $('.says__buttons-next'),
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   });
 
 
@@ -110,7 +118,7 @@ jQuery(document).ready(function ($) {
 
 
 
-  $('.phone-mask').mask('+38(0ZZ)ZZZ-ZZZZ', {translation:  {'Z': {pattern: /[0-9]/, optional: true}}});
+  $('.phone-mask').mask('+38(0ZZ)ZZZ-ZZZZ', { translation: { 'Z': { pattern: /[0-9]/, optional: true } } });
 
   $('.phone-mask').focus(function () {
     if ($(this).val() == "") {
@@ -127,13 +135,13 @@ jQuery(document).ready(function ($) {
 
 
 
-  $('.header__menu-btn').click(function() {
+  $('.header__menu-btn').click(function () {
     $('.header__mobile-menu').toggleClass('active');
   });
 
 
 
-  $('.header__mobile-menu-close').click(function() {
+  $('.header__mobile-menu-close').click(function () {
     $('.header__mobile-menu').removeClass('active');
   });
 

@@ -87,6 +87,10 @@ a {
   text-align: center;
   color: $colorBrown;
   text-transform: uppercase;
+  @include mediaw(576px) {
+    font-size: 18px;
+    line-height: 21px;
+  }
   &--white {
     color: #fff;
   }
