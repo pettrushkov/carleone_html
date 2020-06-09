@@ -86,20 +86,18 @@ jQuery(document).ready(function ($) {
       $('#scrollToTop').removeClass('show');
     }
 
-
-
     var scrollTop = $(window).scrollTop(),
       elementOffset = $('.header__numbers').offset().top,
       distance = (elementOffset - scrollTop);
     console.log(distance);
 
-
-
-    if (distance <= -50) {
-      $('.header__menu').addClass('sticky');
-    } else {
-      $('.header__menu').removeClass('sticky');
-      $('body').removeClass('sticky');
+    if ($(window).width() > 971) {
+      if (distance <= -50) {
+        $('.header__menu').addClass('sticky');
+      } else {
+        $('.header__menu').removeClass('sticky');
+        $('body').removeClass('sticky');
+      }
     }
   });
 
@@ -125,6 +123,18 @@ jQuery(document).ready(function ($) {
       event.preventDefault();
       alert('Введите свой номер телефона!')
     }
+  });
+
+
+
+  $('.header__menu-btn').click(function() {
+    $('.header__mobile-menu').toggleClass('active');
+  });
+
+
+
+  $('.header__mobile-menu-close').click(function() {
+    $('.header__mobile-menu').removeClass('active');
   });
 
 
