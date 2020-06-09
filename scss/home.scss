@@ -1155,11 +1155,16 @@
   background-color: #fff;
   padding: 133px 0 141px;
   @include mediaw(576px) {
-    margin-top: 23px 0 51px;
+    padding: 23px 0 51px;
   }
   text-align: center;
   .section-description {
     margin-top: 11px;
+    @include mediaw(576px) {
+      font-size: 14px;
+      line-height: 16px;
+      margin-top: 8px;
+    }
   }
   .row {
     margin-top: 58px;
@@ -1187,6 +1192,9 @@
           background-image: url(../img/elements/icon-youtube.svg);
           background-position: center;
           background-repeat: no-repeat;
+          @include mediaw(576px) {
+            display: none;
+          }
         }
         .play-icon {
           position: absolute;
@@ -1214,6 +1222,9 @@
     &.youtube {
       .image-block {
         height: 261px;
+        @include mediaw(576px) {
+          height: 179px;
+        }
       }
     }
     .text {
@@ -1231,6 +1242,11 @@
         width: 90px;
         height: 90px;
         border-radius: 50%;
+        @include mediaw(576px) {
+          width: 63px;
+          height: 63px;
+          top: -31.5px;
+        }
         img {
           width: 100%;
           height: 100%;
@@ -1248,6 +1264,9 @@
         text-transform: uppercase;
         font-family: $fontRobotoBold;
         color: $colorBrown;
+        @include mediaw(576px) {
+          margin: 6px 0 9px;
+        }
       }
       .comment {
         font-family: $fontRobotoLight;
@@ -1255,9 +1274,20 @@
     }
   }
   &__slider {
+    @include mediaw(576px) {
+      display: none;
+    }
     &--overlay {
       padding: 1px;
       position: relative;
+      @include mediaw(576px) {
+        display: none;
+      }
+      &.youtube {
+        @include mediaw(576px) {
+          display: block;
+        }
+      }
       .reviews__buttons--youtube {
         width: 100%;
         height: 50px;
@@ -1279,6 +1309,11 @@
           position: relative;
           z-index: 1;
           top: 175px;
+          @include mediaw(576px) {
+            width: 36px;
+            height: 36px;
+            background-size: 15px;
+          }
           &:hover {
             box-shadow: 2px 4px 4px rgba(55, 33, 32, 0.08);
           }
@@ -1286,10 +1321,16 @@
         .reviews__buttons--youtube-prev {
           background-image: url(../img/elements/arrow-left-brown.svg);
           left: -25px;
+          @include mediaw(576px) {
+            left: -15px;
+          }
         }
         .reviews__buttons--youtube-next {
           background-image: url(../img/elements/arrow-right-brown.svg);
           right: -25px;
+          @include mediaw(576px) {
+            right: -15px;
+          }
         }
       }
       .reviews__buttons {
@@ -1336,6 +1377,39 @@
     margin-top: 80px;
     &--youtube {
       margin-top: 58px;
+      @include mediaw(576px) {
+        display: block;
+        margin-top: 21px;
+      }
+      .slick-dots {
+        @include mediaw(576px) {
+          bottom: -28px;
+          z-index: 1;
+        }
+        li {
+          @include mediaw(576px) {
+            margin: 0;
+          }
+          &.slick-active {
+            button {
+              &::before {
+                @include mediaw(576px) {
+                  color: $colorBrown;
+                }
+              }
+            }
+          }
+          button {
+            &::before {
+              opacity: 1;
+              @include mediaw(576px) {
+                color: #EDEAE4;
+                font-size: 6px;
+              }
+            }
+          }
+        }
+      }
       .slick-list {
         margin: 0 -15px;
       }
@@ -1343,6 +1417,9 @@
         margin: 0 15px;
         .text {
           padding: 58px 30px 29px;
+          @include mediaw(576px) {
+            padding: 37px 20px 13px;
+          }
           .car {
             margin: 2.2px 0 9.2px;
           }
@@ -1356,6 +1433,18 @@
   .btn {
     margin-top: 39.44px;
     padding: 18.69px 28px;
+    @include mediaw(576px) {
+      margin-top: 38px;
+      padding: 13px 22px;
+      background-color: #EDC939 !important;
+      color: $colorBrown;
+    }
+    &:hover {
+      @include mediaw(576px) {
+        color: #fff;
+        background-color: $colorBrown !important;
+      }
+    }
   }
 }
 
@@ -1375,6 +1464,12 @@
     color: #FFFFFF;
     text-align: center;
     position: relative;
+    @include mediaw(576px) {
+      background-color: rgba(255,255,255,0.8);
+      padding: 38px 15px 37px 45px;
+      color: $colorBrown;
+      overflow: hidden;
+    }
     &::after {
       content: " ";
       display: block;
@@ -1386,11 +1481,23 @@
       position: absolute;
       right: 0;
       top: 0;
+      @include mediaw(576px) {
+        height: 164px;
+        width: 100%;
+        background-size: contain;
+        background-position: right center;
+        background-image: url('../img/elements/bg-top10-mobile.png');
+      }
     }
     .container {
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+  }
+  .container {
+    @include mediaw(576px) {
+      padding: 0;
     }
   }
   &__title {
@@ -1399,6 +1506,10 @@
     line-height: 35px;
     position: relative;
     z-index: 1;
+    @include mediaw(576px) {
+      font-size: 20px;
+      line-height: 23px;
+    }
     &::after {
       content: " ";
       display: block;
@@ -1411,6 +1522,13 @@
       top: -17px;
       right: -85px;
       z-index: -1;
+      @include mediaw(576px) {
+        width: 54.84px;
+        height: 90px;
+        top: -7px;
+        right: initial;
+        left: -57px;
+      }
     }
   }
   &__description {
@@ -1419,10 +1537,16 @@
     line-height: 21px;
     position: relative;
     z-index: 1;
+    @include mediaw(576px) {
+      margin-top: 5px;
+      font-size: 16px;
+      line-height: 19px;
+    }
   }
   &__item {
     max-width: 1170px;
     margin: 0 auto;
+    transition: background-color .3s;
     &:first-child {
       .top10__question {
         border-top: 1px solid #B5A9A3;
@@ -1436,6 +1560,9 @@
       }
     }
     &.active {
+      @include mediaw(576px) {
+        background-color: #F6F5F5;
+      }
       .top10__question {
         .icon {
           background-color: #EDC939;
@@ -1450,6 +1577,10 @@
           font-size: 18px;
           line-height: 21px;
           color: #00489C;
+          @include mediaw(576px) {
+            font-size: 16px;
+            line-height: 19px;
+          }
         }
         .btn {
           color: #C4C4C4;
@@ -1466,7 +1597,12 @@
     padding-right: 25px;
     border-bottom: 1px solid #B5A9A3;
     border-right: 1px solid #B5A9A3;
+    position: relative;
     cursor: pointer;
+    @include mediaw(576px) {
+      border-left: 1px solid #B5A9A3;
+      justify-content: space-between;
+    }
     &:hover {
       .btn {
         &::after {
@@ -1479,19 +1615,24 @@
     .icon {
       width: 54px;
       height: 100%;
-      min-height: 51px;
       background-color: #EDEAE4;
       border-left: 1px solid #B5A9A3;
       border-right: 1px solid #B5A9A3;
       transition: background-color .3s, border-right-color .3s;
-      position: relative;
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include mediaw(576px) {
+        display: none;
+      }
       &::after {
         content: " ";
         display: block;
         width: 23.77px;
         height: 39px;
         position: absolute;
-        top: 7px;
+        top: 50%;
+        transform: translateY(-50%);
         left: 15.62px;
         background-image: url(../img/elements/icon-circuit.svg);
         background-repeat: no-repeat;
@@ -1505,6 +1646,14 @@
       line-height: 19px;
       width: calc(100% - 174px);
       padding: 15px;
+      margin-left: 54px;
+      @include mediaw(576px) {
+        margin-left: initial;
+        width: 100%;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 9px 0 11px 21px;
+      }
     }
     .btn {
       width: 120px;
@@ -1518,6 +1667,10 @@
       line-height: 16px;
       color: #372120;
       transition: color .3s;
+      @include mediaw(576px) {
+        font-size: 0px;
+        width: initial;
+      }
       &::after {
         content: " ";
         display: block;
@@ -1543,12 +1696,23 @@
     padding: 12px 26px 12px 73px;
     font-family: $fontRobotoLight;
     line-height: 24px;
+    @include mediaw(576px) {
+      font-size: 14px;
+      line-height: 24px;
+      padding: 9px 22px 22px;
+    }
   }
 }
 
 .selection {
   padding: 202px 0 132px;
   background-color: #fff;
+  @include mediaw(767px) {
+    padding: 100px 0 132px;
+  }
+  @include mediaw(576px) {
+    padding: 43px 0 46px;
+  }
   &--overlay {
     max-width: 932px;
     margin-left: auto;
@@ -1566,6 +1730,9 @@
       top: -106px;
       left: -432px;
       z-index: -1;
+      @include mediaw(767px) {
+        display: none;
+      }
     }
   }
   &__title {
@@ -1576,10 +1743,21 @@
     background-color: #F7D504;
     color: $colorBrown;
     text-align: center;
+    @include mediaw(767px) {
+      padding: 47px 30px 37px;
+    }
+    @include mediaw(576px) {
+      padding: 17px 24px 15px;
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
   form {
     padding: 38px 53px 44px 60px;
     background-color: #EDEAE4;
+    @include mediaw(576px) {
+      padding: 12px 10px 34px;
+    }
     label {
       display: block;
       span {
@@ -1595,6 +1773,9 @@
       height: 54px;
       background-color: #fff;
       border: 1px solid #B5A9A3;
+      @include mediaw(576px) {
+        height: 48px;
+      }
     }
     .nice-select {
       display: block;
@@ -1609,6 +1790,9 @@
       border-radius: 0;
       height: 54px;
       padding: 0 20px;
+      @include mediaw(576px) {
+        margin-bottom: 0;
+      }
       .current {
         position: relative;
         top: 14px;
@@ -1632,6 +1816,12 @@
       font-size: 18px;
       line-height: 21px;
       max-width: 210px;
+      @include mediaw(576px) {
+        margin: 20px auto 0;
+        font-size: 14px;
+        line-height: 16px;
+        max-width: 176px;
+      }
       &:hover {
         color: #fff;
       }
@@ -1641,6 +1831,19 @@
     margin-top: 103px;
     max-width: 903px;
     position: relative;
+    @include mediaw(1199px) {
+      max-width: 700px;
+    }
+    @include mediaw(991px) {
+      max-width: 500px;
+    }
+    @include mediaw(768px) {
+      max-width: initial;
+      margin-top: 240px;
+    }
+    @include mediaw(576px) {
+      margin-top: 162px;
+    }
     &::after {
       content: " ";
       display: block;
@@ -1652,12 +1855,29 @@
       position: absolute;
       right: -411px;
       top: -54px;
+      @include mediaw(768px) {
+        max-width: 500px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -250px;
+      }
+      @include mediaw(576px) {
+        max-width: 100%;
+        background-image: url(../img/elements/bg-tesla-usa.png);
+        background-position-x: center;
+        height: 150px;
+        top: -153px;
+      }
     }
     .title {
       font-family: $fontRobotoBold;
       color: $colorBrown;
       font-size: 30px;
       line-height: 35px;
+      @include mediaw(576px) {
+        font-size: 18px;
+        line-height: 21px;
+      }
     }
     .description {
       margin-top: 13px;
@@ -1665,6 +1885,12 @@
       font-family: $fontRobotoLight;
       max-height: 57px;
       overflow: auto;
+      @include mediaw(576px) {
+        font-size: 14px;
+        line-height: 16px;
+        margin-top: initial;
+        max-height: 65px;
+      }
       &::-webkit-scrollbar { 
         display: none; 
       }
@@ -1675,23 +1901,53 @@
 .main-office {
   background-color: #EDEAE4;
   padding: 83px 0 81px;
+  @include mediaw(576px) {
+    padding: 37px 0 55px;
+    background-color: $colorBrown;
+    color: #fff;
+  }
   .section-title {
     margin-bottom: 41px;
     text-align: left;
+    @include mediaw(576px) {
+      color: $colorYellow;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+  }
+  .row {
+    @include mediaw(576px) {
+      flex-direction: column-reverse;
+    }
   }
   &__call {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include mediaw(576px) {
+      padding-left: 45px;
+    }
     a {
       font-family: $fontRobotoBold;
       font-size: 24px;
       line-height: 28px;
       text-align: center;
+      @include mediaw(576px) {
+        text-align: left;
+        width: 100%;
+      }
+      &.btn {
+        @include mediaw(576px) {
+          display: none;
+        }
+      }
       span {
         display: block;
         font-size: 12px;
         line-height: 14px;
+        @include mediaw(576px) {
+          display: none;
+        }
       }
       &:not(.btn) {
         position: relative;
@@ -1706,6 +1962,30 @@
           position: absolute;
           left: -23px;
           top: 4px;
+          @include mediaw(576px) {
+            background-image: url(../img/elements/icon-phone-yellow.svg);
+            width: 18px;
+            height: 18px;
+            left: -27px;
+            top: 5px;
+          }
+        }
+      }
+    }
+    .recall {
+      display: none;
+      @include mediaw(576px) {
+        display: block;
+        font-size: 14px;
+        line-height: 16px;
+        color: $colorYellow;
+        font-family: $fontRobotoRegular;
+        cursor: pointer;
+        width: 100%;
+      }
+      &:hover {
+        @include mediaw(576px) {
+          text-decoration: underline;
         }
       }
     }
@@ -1719,6 +1999,10 @@
   }
   &__shedule {
     padding-left: 44px;
+    @include mediaw(576px) {
+      padding-left: 45px;
+      margin-top: 9px;
+    }
     .title {
       font-family: $fontRobotoLight;
       font-size: 16px;
@@ -1726,6 +2010,10 @@
       color: $colorBrown;
       margin-bottom: 11px;
       position: relative;
+      @include mediaw(576px) {
+        height: 0;
+        font-size: 0px;
+      }
       &::before {
         content: " ";
         display: block;
@@ -1737,6 +2025,12 @@
         position: absolute;
         left: -29px;
         top: -2px;
+        @include mediaw(576px) {
+          background-image: url(../img/elements/icon-clock-yellow.svg);
+          width: 20px;
+          height: 20px;
+          top: 12px;
+        }
       }
     }
     span {
@@ -1744,6 +2038,11 @@
       font-family: $fontRobotoMedium;
       font-size: 16px;
       line-height: 19px;
+      @include mediaw(576px) {
+        font-family: $fontRobotoRegular;
+        font-size: 18px;
+        line-height: 24px;
+      }
     }
   }
   &__email {
@@ -1754,9 +2053,21 @@
     padding-left: 29px;
     text-decoration-line: underline;
     line-height: 19px;
+    @include mediaw(576px) {
+      padding-left: 30px;
+      font-size: 18px;
+      line-height: 21px;
+      margin-top: 23px;
+      @include mediaw(576px) {
+        color: $colorYellow;
+      }
+    }
     &:hover {
       text-decoration: none;
       color: #0078BC;
+      @include mediaw(576px) {
+        color: $colorYellow;
+      }
     }
     &::before {
       content: " ";
@@ -1769,6 +2080,13 @@
       position: absolute;
       left: 0;
       top: 1px;
+      @include mediaw(576px) {
+        background-image: url(../img/elements/icon-email-yellow.svg);
+        width: 20px;
+        height: 14px;
+        left: 3px;
+        top: 4px;
+      }
     }
   }
   &__address {
@@ -1777,6 +2095,10 @@
     line-height: 19px;
     margin-top: 33px;
     padding-left: 29px;
+    @include mediaw(576px) {
+      padding-left: 30px;
+      margin-top: 28px;
+    }
     span {
       display: block;
       font-family: $fontRobotoLight;
@@ -1784,6 +2106,25 @@
       line-height: 19px;
       color: $colorBrown;
       margin-bottom: 7px;
+      @include mediaw(576px) {
+        display: none;
+      }
+    }
+    strong {
+      display: none;
+      @include mediaw(576px) {
+        display: block;
+        font-size: 14px;
+        line-height: 16px;
+        margin-top: 7px;
+        color: $colorYellow;
+        cursor: pointer;
+      }
+      &:hover {
+        @include mediaw(576px) {
+          text-decoration: underline;
+        }
+      }
     }
     &::before {
       content: " ";
@@ -1812,6 +2153,9 @@
     margin-top: 20px;
     padding-left: 62px;
     position: relative;
+    @include mediaw(576px) {
+      display: none;
+    }
     &::before {
       content: " ";
       display: block;
@@ -1844,6 +2188,9 @@
 .contact {
   padding: 135px 0 140px;
   background-color: #fff;
+  @include mediaw(576px) {
+    display: none;
+  }
   .row {
     margin-top: 39px;
   }

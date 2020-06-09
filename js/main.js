@@ -22,7 +22,25 @@ jQuery(document).ready(function ($) {
     slidesToShow: 4,
     slidesToScroll: 1,
     prevArrow: $('.reviews__buttons-prev'),
-    nextArrow: $('.reviews__buttons-next')
+    nextArrow: $('.reviews__buttons-next'),
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: "unslick"
+      }
+    ]
   });
 
 
@@ -32,7 +50,22 @@ jQuery(document).ready(function ($) {
     slidesToShow: 3,
     slidesToScroll: 1,
     prevArrow: $('.reviews__buttons--youtube-prev'),
-    nextArrow: $('.reviews__buttons--youtube-next')
+    nextArrow: $('.reviews__buttons--youtube-next'),
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          dots: true
+        }
+      }
+    ]
   });
 
 
