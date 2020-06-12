@@ -8,6 +8,17 @@
   @include mediaw(576px) {
     padding: 27px 0 22px;
   }
+  &__uptitle {
+    font-family: $fontRobotoBold;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    color: $colorYellow;
+    margin-bottom: 30px;
+    &.mb0 {
+      margin-bottom: 0;
+    }
+  }
   h1 {
     font-size: 36px;
     line-height: 42px;

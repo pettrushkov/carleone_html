@@ -1,0 +1,26 @@
+.post {
+  padding: 50px 0 121px;
+  background-color: #fff;
+  &__image {
+    text-align: center;
+    img {
+      border: 1px solid #372120;
+    }
+  }
+  .section-title {
+    margin-top: 66px;
+    background-color: $colorYellow;
+    padding: 60px 265px 66px;
+  }
+  .the_content {
+    padding: 38px 0 79px;
+    background-color: #F6F5F5;
+  }
+  .btn {
+    margin-top: 34px;
+    padding: 18px 40px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,39 @@
+.repair-types {
+  padding: 48px 0 177px;
+  background-color: #fff;
+  &__item {
+    border: 1px solid transparent;
+    transition: border-color .3s;
+    margin-top: 56px;
+    &:hover {
+      border-color: #EDC939;
+      .image-block {
+        opacity: 1;
+      }
+      .title {
+        color: $colorBrown;
+        background-color: $colorYellow;
+      }
+    }
+    .image-block {
+      height: 219px;
+      opacity: 0.6;
+      transition: opacity .3s;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .title {
+      font-family: $fontRobotoBold;
+      color: #fff;
+      background-color: $colorBrown;
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center;
+      padding: 22px 0 19px;
+      transition: background-color .3s, color .3s;
+    }
+  }
+}

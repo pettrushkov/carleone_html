@@ -1,0 +1,68 @@
+.check {
+  padding: 66px 0 100px;
+  background-color: #fff;
+  .section-subtitle {
+    span {
+      font-family: $fontRobotoRegular;
+    }
+  }
+  &__description {
+    margin-top: 15px;
+    text-align: center;
+    line-height: 19px;
+  }
+  &__vin--overlay {
+    max-width: 717px;
+    margin: 29px auto 0;
+  }
+  &__vin {
+    padding: 35px 0 22px;
+    background-color: $colorBrown;
+    margin-bottom: 100px;
+    form {
+      display: block;
+      position: relative;
+      input {
+        display: block;
+        width: 100%;
+        height: 54px;
+        padding: 0 140px 0 28px;
+        &[type="submit"] {
+          width: 107px;
+          min-width: initial;
+          padding: 0;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-image: url(../img/elements/icon-search.svg);
+          background-size: 30px;
+        }
+      }
+      .submit--wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+    &-what {
+      margin-top: 18px;
+      text-align: center;
+      color: #fff;
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+  .row {
+    margin-top: 40px;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .check-article {
+    background-color: #F6F5F5;
+    padding: 39px 56px;
+    .section-subtitle {
+      text-align: left;
+    }
+  }
+}

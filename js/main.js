@@ -96,6 +96,16 @@ jQuery(document).ready(function ($) {
   });
 
 
+  $('.faq__question').click(function () {
+    if ($(this).parent().siblings().hasClass('active')) {
+      $('.faq__item.active .faq__answer').not($(this)).slideUp();
+      $('.faq__item.active').not($(this)).removeClass('active');
+    }
+    $(this).parent().toggleClass('active');
+    $(this).next().slideToggle();
+  });
+
+
 
   $('.top10__question').click(function () {
     if ($(this).parent().siblings().hasClass('active')) {
@@ -176,6 +186,76 @@ jQuery(document).ready(function ($) {
 
   $('.header__mobile-menu-close').click(function () {
     $('.header__mobile-menu').removeClass('active');
+  });
+
+
+  $('.new-offers__slider').slick({
+    arrows: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: $('.new-offers__slider-prev'),
+    nextArrow: $('.new-offers__slider-next'),
+    infinite: false,
+    // responsive: [
+    //   {
+    //     breakpoint: 767,
+    //     settings: {
+    //       slidesToShow: 1
+    //     }
+    //   }
+    // ]
+  });
+
+
+  $('.news-preview__slider').slick({
+    arrows: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: $('.news-preview__slider-prev'),
+    nextArrow: $('.news-preview__slider-next'),
+    infinite: false,
+    // responsive: [
+    //   {
+    //     breakpoint: 767,
+    //     settings: {
+    //       slidesToShow: 1
+    //     }
+    //   }
+    // ]
+  });
+
+
+
+  $('.auto__slider').slick({
+    asNavFor: '.auto__mini-slider',
+    arrows: true,
+    prevArrow: $('.auto__buttons-prev'),
+    nextArrow: $('.auto__buttons-next'),
+    // responsive: [
+    //   {
+    //     breakpoint: 767,
+    //     settings: {
+    //       slidesToShow: 1
+    //     }
+    //   }
+    // ]
+  });
+
+
+
+  $('.auto__mini-slider').slick({
+    asNavFor: '.auto__slider',
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    focusOnSelect: true,
+    // responsive: [
+    //   {
+    //     breakpoint: 767,
+    //     settings: {
+    //       slidesToShow: 1
+    //     }
+    //   }
+    // ]
   });
 
 
