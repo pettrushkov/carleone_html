@@ -259,5 +259,35 @@ jQuery(document).ready(function ($) {
   });
 
 
+  var rangeSlider = document.getElementById('price-range');
+  noUiSlider.create(rangeSlider, {
+    step: 10,
+    start: [6600, 101560],
+    connect: true,
+    range: {
+      'min': 6600,
+      'max': 120000
+    },
+    format: wNumb({
+      decimals: 0,
+      thousand: ',',
+      prefix: '$'
+    })
+  });
+
+  var inputRangeFrom = document.getElementById('price-range-from'),
+      inputRangeTo = document.getElementById('price-range-to');
+  rangeSlider.noUiSlider.on('update', function (values) {
+    inputRangeFrom.value = values[0];
+    inputRangeTo.value = values[1];
+  });
+  inputRangeFrom.addEventListener('change', function () {
+    rangeSlider.noUiSlider.set([this.value]);
+  });
+  inputRangeTo.addEventListener('change', function () {
+    rangeSlider.noUiSlider.set([this.value]);
+  });
+
+
 });
 

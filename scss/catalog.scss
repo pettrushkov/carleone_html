@@ -1,0 +1,164 @@
+.lots {
+  background-color: #fff;
+  padding-top: 60px;
+  .filter {
+    .section-description {
+      color: #fff;
+      background-color: $colorBrown;
+      padding: 23px 0;
+    }
+    &__block {
+      border: 1px solid #B5A9A3;
+      padding: 23px;
+    }
+    .price-range-wrapper {
+      margin-top: 30px;
+    }
+    .price-range-numbers {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      #price-range-from, #price-range-to {
+        width: 150px;
+        height: 54px;
+        background-color: #EDEAE4;
+        border: 1px solid #000000;
+        text-align: center;
+        padding: 0 15px;
+      }
+    }
+    .btn {
+      margin-top: 65px;
+      width: 100%;
+      padding: 17px 0;
+    }
+  }
+  .nice-select {
+    display: block;
+    margin-top: 12px;
+    background-color: #F7F7F7;
+    border: 1px solid #B5A9A3;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    border-radius: 0;
+    height: 54px;
+    padding: 0 20px;
+    &.sort {
+      width: 290px;
+    }
+    @include mediaw(576px) {
+      height: 48px;
+    }
+    .current {
+      position: relative;
+      top: 14px;
+      @include mediaw(576px) {
+        top: 12px;
+      }
+    }
+    &::after {
+      background-image: url(../img/elements/arrow-bottom-yellow.svg);
+      width: 11px;
+      height: 7px;
+      border: none;
+      transform: none;
+    }
+    &.open::after {
+      transform: rotate(180deg);
+      right: 16px;
+    }
+    .list {
+      width: 100%;
+    }
+  }
+  .lot {
+    padding: 48px 0 38px;
+    border-bottom: 1px solid #B5A9A3;
+    .image-block {
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .car {
+      margin-top: 37px;
+      @include mediaw(576px) {
+        margin-top: 26px;
+      }
+      .title-and-price {
+        display: flex;
+        justify-content: space-between;
+        .title {
+          color: #000000;
+          max-width: 280px;
+          font-family: $fontRobotoMedium;
+          font-size: 20px;
+          line-height: 23px;
+        }
+        .price {
+          color: $colorBrown;
+          font-family: $fontRobotoBold;
+          font-size: 24px;
+          line-height: 28px;
+        }
+      }
+      .characteristics {
+        p {
+          position: relative;
+          font-size: 16px;
+          line-height: 19px;
+          font-family: $fontRobotoLight;
+          color: #000;
+          padding-left: 42px;
+          margin-top: 17px;
+          &::after {
+            content: " ";
+            display: block;
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            top: -9px;
+            left: 0px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+          }
+        }
+        .run::after {
+          background-image: url(../img/elements/run-icon.svg);
+        }
+        .fuel::after {
+          background-image: url(../img/elements/fuel-icon.svg);
+        }
+        .capacity::after {
+          background-image: url(../img/elements/capacity-icon.svg);
+        }
+        .year::after {
+          background-image: url(../img/elements/year-icon.svg);
+        }
+        .transmission::after {
+          background-image: url(../img/elements/transmission-icon.svg);
+        }
+        .drive::after {
+          background-image: url(../img/elements/drive-icon.svg);
+        }
+      }
+      .btn {
+        width: 100%;
+        padding: 18px 0;
+        &:first-child {
+          margin-top: 17px;
+        }
+        &:not(:first-child) {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  .pagination {
+    margin-top: 60px;
+  }
+}

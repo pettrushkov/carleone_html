@@ -8,6 +8,9 @@
   @include mediaw(576px) {
     padding: 27px 0 22px;
   }
+  &.partners {
+    background-image: url(../img/content/Group1881.png);
+  }
   &__uptitle {
     font-family: $fontRobotoBold;
     font-size: 30px;
@@ -46,6 +49,43 @@
   @include mediaw(576px) {
     padding-top: 0;
     background-color: #fff;
+  }
+  &.partners {
+    padding-top: 67px;
+    background-color: #fff;
+    .quick-order__title {
+      text-align: center;
+      max-width: 911px;
+      margin: 0 auto;
+      font-family: $fontRobotoMedium;
+      font-size: 30px;
+      line-height: 36px;
+      span {
+        font-family: $fontRobotoBold;
+        font-size: 34px;
+        line-height: 36px;
+        color: $colorYellow;
+      }
+    }
+    .quick-order--overlay {
+      margin-top: 82px;
+    }
+    form input[type=submit] {
+      max-width: 398px;
+    }
+    .quick-order-partners__footnote {
+      max-width: 1170px;
+      margin: 92px auto 0;
+      font-size: 24px;
+      line-height: 28px;
+      span {
+        display: block;
+        font-family: $fontRobotoBold;
+        font-size: 30px;
+        line-height: 35px;
+        color: $colorYellow;
+      }
+    }
   }
   &--overlay {
     max-width: 706px;
