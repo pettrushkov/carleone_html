@@ -259,33 +259,21 @@ jQuery(document).ready(function ($) {
   });
 
 
-  var rangeSlider = document.getElementById('price-range');
-  noUiSlider.create(rangeSlider, {
-    step: 10,
-    start: [6600, 101560],
-    connect: true,
-    range: {
-      'min': 6600,
-      'max': 120000
-    },
-    format: wNumb({
-      decimals: 0,
-      thousand: ',',
-      prefix: '$'
-    })
+  
+
+  $('.services__group a').click(function(e) {
+    if($(this).parent().children().length > 1) {
+      e.preventDefault();
+      $(this).parent().toggleClass('active');
+      $(this).parent().find('ul').slideToggle();
+    }
   });
 
-  var inputRangeFrom = document.getElementById('price-range-from'),
-      inputRangeTo = document.getElementById('price-range-to');
-  rangeSlider.noUiSlider.on('update', function (values) {
-    inputRangeFrom.value = values[0];
-    inputRangeTo.value = values[1];
-  });
-  inputRangeFrom.addEventListener('change', function () {
-    rangeSlider.noUiSlider.set([this.value]);
-  });
-  inputRangeTo.addEventListener('change', function () {
-    rangeSlider.noUiSlider.set([this.value]);
+  $('.calculator__tabs li').click(function() {
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+    $('.calculator__row').hide();
+    $('.calculator__row[data-raztamozhka="' + $(this).text() + '"]').show();
   });
 
 

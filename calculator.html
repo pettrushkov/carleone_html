@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./css/jquery.fancybox.css">
-  <link rel="stylesheet" href="./css/nouislider.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
   <title>Carleone - главная</title>
 </head>
@@ -189,326 +188,349 @@
     </div>
   </div>
 
-  <section class="welcome">
+  <section class="calculator">
     <div class="container">
-      <h1>АВТО ИЗ США</h1>
-      <p>Сайт по продаже автомобилей из Америки. <br>Здесь можно купить Бу автомобили, целые и битые машины с авто аукционов США - <br>Копарт, Манхейм, IAAI, CARS.COM </p>
-    </div>
-  </section>
-
-  <section class="lots">
-    <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <div class="filter">
-            <p class="section-description">ФИЛЬТР</p>
-            <div class="filter__block">
+      <h2 class="section-title">КАЛЬКУЛЯТОР СТОИМОСТИ РАСТАМОЖКИ</h2>
+      <ul class="calculator__tabs">
+        <li class="active">ЛЕГКОВЫЕ</li>
+        <li>ЭЛЕКТРО</li>
+        <li>ГИБРИД</li>
+        <li>МОТО</li>
+        <li>ГРУЗОВЫЕ</li>
+      </ul>
+      <div class="calculator__row active" data-raztamozhka="ЛЕГКОВЫЕ">
+        <form action="">
+          <label class="row">
+            <div class="col-5">
+              <p>СТОИМОСТЬ АВТОМОБИЛЯ</p>
+            </div>
+            <div class="col-5">
+              <input type="text" placeholder="10000">
+            </div>
+            <div class="col-2">
               <select name="">
-                <option value="Наличие">Наличие</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
+                <option value="USD">USD</option>
+                <option value="UAH">UAH</option>
               </select>
+            </div>
+          </label>
+          <label class="row">
+            <div class="col-5">
+              <p>Объем двигателя, куб.дм</p>
+            </div>
+            <div class="col-7">
+              <select>
+                <option value="2.0">2.0</option>
+                <option value="2.5">2.5</option>
+                <option value="3.5">3.5</option>
+              </select>
+            </div>
+          </label>
+          <label class="row">
+            <div class="col-5">
+              <p>Тип двигателя</p>
+            </div>
+            <div class="col-7">
               <select name="">
-                <option value="Марка">Марка</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
+                <option value="Бензин">Бензин</option>
+                <option value="Дизель">Дизель</option>
               </select>
+            </div>
+          </label>
+          <label class="row">
+            <div class="col-5">
+              <p>Возраст автомобиля</p>
+            </div>
+            <div class="col-7">
               <select name="">
-                <option value="Модель">Модель</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
               </select>
-              <select name="">
-                <option value="Кузов">Кузов</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-              <select name="">
-                <option value="Год">Год</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-              <select name="">
-                <option value="Привод">Привод</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-              <select name="">
-                <option value="Наличие">Наличие</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-              <select name="">
-                <option value="Топливо">Топливо</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-              <select name="">
-                <option value="Коробка">Коробка</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-              <div class="price-range-wrapper">
-                <div id="price-range"></div>
-              </div>
-              <div class="price-range-numbers">
-                <input type="text" id="price-range-from">
-                <input type="text" id="price-range-to">
-              </div>
-              <button class="btn btn--brown">RESET</button>
+            </div>
+          </label>
+          <div class="row">
+            <div class="col-5"></div>
+            <div class="col-7">
+              <input type="submit" class="btn btn--brown" value="РАССЧИТАТЬ">
             </div>
           </div>
-        </div>
-      <div class="col-8">
-        <select name="" class="sort">
-          <option value="ИСХОДНАЯ СОРТИРОВКА">ИСХОДНАЯ СОРТИРОВКА</option>
-          <option value="По популярности">По популярности</option>
-          <option value="По популярности">По популярности</option>
-          <option value="Цены по возрастанию">Цены по возрастанию</option>
-          <option value="Цены по убыванию">Цены по убыванию</option>
-        </select>
-        <div class="lot row">
-          <div class="col-6">
-            <div class="image-block">
-              <img src="./img/content/fekwfkwnew.png" alt="">
-            </div>
-          </div>
-          <div class="col-6 car">
-            <div class="title-and-price">
-              <p class="title">VOLKSWAGEN TIGUAN 2012</p>
-              <p class="price">$18 000</p>
-            </div>
-            <div class="row">
-              <div class="col-5">
-                <div class="characteristics">
-                  <p class="run">108 900 км</p>
-                  <p class="year">2012</p>
-                  <p class="transmission">Автомат</p>
-                  <p class="drive">Полный</p>
-                  <p class="capacity">2.0</p>
-                  <p class="fuel">Бензин</p>
-                </div>
-              </div>
-              <div class="col-7">
-                <a href="#" class="btn btn--green">КУПИТЬ</a>
-                <a href="#" class="btn btn--brown">ПОДРОБНЕЕ</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="lot row">
-          <div class="col-6">
-            <div class="image-block">
-              <img src="./img/content/fekwfkwnew.png" alt="">
-            </div>
-          </div>
-          <div class="col-6 car">
-            <div class="title-and-price">
-              <p class="title">VOLKSWAGEN TIGUAN 2012</p>
-              <p class="price">$18 000</p>
-            </div>
-            <div class="row">
-              <div class="col-5">
-                <div class="characteristics">
-                  <p class="run">108 900 км</p>
-                  <p class="year">2012</p>
-                  <p class="transmission">Автомат</p>
-                  <p class="drive">Полный</p>
-                  <p class="capacity">2.0</p>
-                  <p class="fuel">Бензин</p>
-                </div>
-              </div>
-              <div class="col-7">
-                <a href="#" class="btn btn--green">КУПИТЬ</a>
-                <a href="#" class="btn btn--brown">ПОДРОБНЕЕ</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="lot row">
-          <div class="col-6">
-            <div class="image-block">
-              <img src="./img/content/fekwfkwnew.png" alt="">
-            </div>
-          </div>
-          <div class="col-6 car">
-            <div class="title-and-price">
-              <p class="title">VOLKSWAGEN TIGUAN 2012</p>
-              <p class="price">$18 000</p>
-            </div>
-            <div class="row">
-              <div class="col-5">
-                <div class="characteristics">
-                  <p class="run">108 900 км</p>
-                  <p class="year">2012</p>
-                  <p class="transmission">Автомат</p>
-                  <p class="drive">Полный</p>
-                  <p class="capacity">2.0</p>
-                  <p class="fuel">Бензин</p>
-                </div>
-              </div>
-              <div class="col-7">
-                <a href="#" class="btn btn--green">КУПИТЬ</a>
-                <a href="#" class="btn btn--brown">ПОДРОБНЕЕ</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="lot row">
-          <div class="col-6">
-            <div class="image-block">
-              <img src="./img/content/fekwfkwnew.png" alt="">
-            </div>
-          </div>
-          <div class="col-6 car">
-            <div class="title-and-price">
-              <p class="title">VOLKSWAGEN TIGUAN 2012</p>
-              <p class="price">$18 000</p>
-            </div>
-            <div class="row">
-              <div class="col-5">
-                <div class="characteristics">
-                  <p class="run">108 900 км</p>
-                  <p class="year">2012</p>
-                  <p class="transmission">Автомат</p>
-                  <p class="drive">Полный</p>
-                  <p class="capacity">2.0</p>
-                  <p class="fuel">Бензин</p>
-                </div>
-              </div>
-              <div class="col-7">
-                <a href="#" class="btn btn--green">КУПИТЬ</a>
-                <a href="#" class="btn btn--brown">ПОДРОБНЕЕ</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="lot row">
-          <div class="col-6">
-            <div class="image-block">
-              <img src="./img/content/fekwfkwnew.png" alt="">
-            </div>
-          </div>
-          <div class="col-6 car">
-            <div class="title-and-price">
-              <p class="title">VOLKSWAGEN TIGUAN 2012</p>
-              <p class="price">$18 000</p>
-            </div>
-            <div class="row">
-              <div class="col-5">
-                <div class="characteristics">
-                  <p class="run">108 900 км</p>
-                  <p class="year">2012</p>
-                  <p class="transmission">Автомат</p>
-                  <p class="drive">Полный</p>
-                  <p class="capacity">2.0</p>
-                  <p class="fuel">Бензин</p>
-                </div>
-              </div>
-              <div class="col-7">
-                <a href="#" class="btn btn--green">КУПИТЬ</a>
-                <a href="#" class="btn btn--brown">ПОДРОБНЕЕ</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="lot row">
-          <div class="col-6">
-            <div class="image-block">
-              <img src="./img/content/fekwfkwnew.png" alt="">
-            </div>
-          </div>
-          <div class="col-6 car">
-            <div class="title-and-price">
-              <p class="title">VOLKSWAGEN TIGUAN 2012</p>
-              <p class="price">$18 000</p>
-            </div>
-            <div class="row">
-              <div class="col-5">
-                <div class="characteristics">
-                  <p class="run">108 900 км</p>
-                  <p class="year">2012</p>
-                  <p class="transmission">Автомат</p>
-                  <p class="drive">Полный</p>
-                  <p class="capacity">2.0</p>
-                  <p class="fuel">Бензин</p>
-                </div>
-              </div>
-              <div class="col-7">
-                <a href="#" class="btn btn--green">КУПИТЬ</a>
-                <a href="#" class="btn btn--brown">ПОДРОБНЕЕ</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="lot row">
-          <div class="col-6">
-            <div class="image-block">
-              <img src="./img/content/fekwfkwnew.png" alt="">
-            </div>
-          </div>
-          <div class="col-6 car">
-            <div class="title-and-price">
-              <p class="title">VOLKSWAGEN TIGUAN 2012</p>
-              <p class="price">$18 000</p>
-            </div>
-            <div class="row">
-              <div class="col-5">
-                <div class="characteristics">
-                  <p class="run">108 900 км</p>
-                  <p class="year">2012</p>
-                  <p class="transmission">Автомат</p>
-                  <p class="drive">Полный</p>
-                  <p class="capacity">2.0</p>
-                  <p class="fuel">Бензин</p>
-                </div>
-              </div>
-              <div class="col-7">
-                <a href="#" class="btn btn--green">КУПИТЬ</a>
-                <a href="#" class="btn btn--brown">ПОДРОБНЕЕ</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="pagination">
-          <a href="#" class="pagination-first"></a>
-          <ul class="pagination-list">
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">12</a></li>
-            <li><a href="#">13</a></li>
-            <li><a href="#">14</a></li>
-          </ul>
-          <a href="#" class="pagination-last"></a>
-        </div>
+        </form>
       </div>
+      <div class="calculator__row" data-raztamozhka="ЭЛЕКТРО">
+        <form action="">
+          <label class="row">
+            <div class="col-5">
+              <p>СТОИМОСТЬ АВТОМОБИЛЯ</p>
+            </div>
+            <div class="col-5">
+              <input type="text" placeholder="10000">
+            </div>
+            <div class="col-2">
+              <select name="">
+                <option value="USD">USD</option>
+                <option value="UAH">UAH</option>
+              </select>
+            </div>
+          </label>
+          <label class="row">
+            <div class="col-5">
+              <p>Мощность, кВт</p>
+            </div>
+            <div class="col-7">
+              <select>
+                <option value="150">150</option>
+                <option value="200">200</option>
+                <option value="300">300</option>
+              </select>
+            </div>
+          </label>
+          <div class="row">
+            <div class="col-5"></div>
+            <div class="col-7">
+              <input type="submit" class="btn btn--brown" value="РАССЧИТАТЬ">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="calculator__row" data-raztamozhka="ГИБРИД">
+        <form action="">
+          <label class="row">
+            <div class="col-5">
+              <p>СТОИМОСТЬ АВТОМОБИЛЯ</p>
+            </div>
+            <div class="col-5">
+              <input type="text" placeholder="10000">
+            </div>
+            <div class="col-2">
+              <select name="">
+                <option value="USD">USD</option>
+                <option value="UAH">UAH</option>
+              </select>
+            </div>
+          </label>
+          <div class="row">
+            <div class="col-5"></div>
+            <div class="col-7">
+              <input type="submit" class="btn btn--brown" value="РАССЧИТАТЬ">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="calculator__row" data-raztamozhka="МОТО">
+        <form action="">
+          <label class="row">
+            <div class="col-5">
+              <p>СТОИМОСТЬ АВТОМОБИЛЯ</p>
+            </div>
+            <div class="col-5">
+              <input type="text" placeholder="10000">
+            </div>
+            <div class="col-2">
+              <select name="">
+                <option value="USD">USD</option>
+                <option value="UAH">UAH</option>
+              </select>
+            </div>
+          </label>
+          <label class="row">
+            <div class="col-5">
+              <p>Объем двигателя, куб.дм</p>
+            </div>
+            <div class="col-7">
+              <select>
+                <option value="2.0">2.0</option>
+                <option value="2.5">2.5</option>
+                <option value="3.5">3.5</option>
+              </select>
+            </div>
+          </label>
+          <label class="row">
+            <div class="col-5">
+              <p>Возраст автомобиля</p>
+            </div>
+            <div class="col-7">
+              <select name="">
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+              </select>
+            </div>
+          </label>
+          <div class="row">
+            <div class="col-5"></div>
+            <div class="col-7">
+              <input type="submit" class="btn btn--brown" value="РАССЧИТАТЬ">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="calculator__row" data-raztamozhka="ГРУЗОВЫЕ">
+        <form action="">
+          <label class="row">
+            <div class="col-5">
+              <p>СТОИМОСТЬ АВТОМОБИЛЯ</p>
+            </div>
+            <div class="col-5">
+              <input type="text" placeholder="10000">
+            </div>
+            <div class="col-2">
+              <select name="">
+                <option value="USD">USD</option>
+                <option value="UAH">UAH</option>
+              </select>
+            </div>
+          </label>
+          <label class="row">
+            <div class="col-5">
+              <p>Объем двигателя, куб.дм</p>
+            </div>
+            <div class="col-7">
+              <select>
+                <option value="2.0">2.0</option>
+                <option value="2.5">2.5</option>
+                <option value="3.5">3.5</option>
+              </select>
+            </div>
+          </label>
+          <label class="row">
+            <div class="col-5">
+              <p>Тип двигателя</p>
+            </div>
+            <div class="col-7">
+              <select name="">
+                <option value="Бензин">Бензин</option>
+                <option value="Дизель">Дизель</option>
+              </select>
+            </div>
+          </label>
+          <label class="row">
+            <div class="col-5">
+              <p>ПОЛНАЯ МАССА, кг</p>
+            </div>
+            <div class="col-7">
+              <select name="">
+                <option value="3000">3000</option>
+                <option value="5000">5000</option>
+                <option value="7000">7000</option>
+              </select>
+            </div>
+          </label>
+          <label class="row">
+            <div class="col-5">
+              <p>Возраст автомобиля</p>
+            </div>
+            <div class="col-7">
+              <select name="">
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+              </select>
+            </div>
+          </label>
+          <div class="row">
+            <div class="col-5"></div>
+            <div class="col-7">
+              <input type="submit" class="btn btn--brown" value="РАССЧИТАТЬ">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="calculator__result rastamozhka">
+        <div class="container">
+          <h2 class="calculator__result-title">РЕЗУЛЬТАТ</h2>
+          <div class="calculator__result--overlay">
+            <div class="row titles">
+              <div class="col-5"></div>
+              <div class="col-4">
+                <p>Действующие тарифы</p>
+              </div>
+              <div class="col-3">
+                <p>Новые тарифы<span>(законопроект №8487)</span></p>
+              </div>
+            </div>
+            <div class="row bold">
+              <div class="col-5">
+                <p>Цена с растаможкой</p>
+              </div>
+              <div class="col-4">
+                <p id="rastamozhkaCurrent">19 863 $</p>
+              </div>
+              <div class="col-3">
+                <p id="rastamozhkaNew">19 863 $</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-5">
+                <p>НДС</p>
+              </div>
+              <div class="col-4">
+                <p id="ndsCurrent">19 863 $</p>
+              </div>
+              <div class="col-3">
+                <p id="ndsNew">19 863 $</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-5">
+                <p>Пошлина</p>
+              </div>
+              <div class="col-4">
+                <p id="poshlinaCurrent">19 863 $</p>
+              </div>
+              <div class="col-3">
+                <p id="poshlinaNew">19 863 $</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-5">
+                <p>Акцизный сбор</p>
+              </div>
+              <div class="col-4">
+                <p id="akcizniyCurrent">19 863 $</p>
+              </div>
+              <div class="col-3">
+                <p id="akcizniyNew">19 863 $</p>
+              </div>
+            </div>
+            <div class="row bold">
+              <div class="col-5">
+                <p>Всего таможенных платежей</p>
+              </div>
+              <div class="col-4">
+                <p id="vsegoCurrent">19 863 $</p>
+              </div>
+              <div class="col-3">
+                <p id="vsegoNew">19 863 $</p>
+              </div>
+            </div>
+            <div class="row bold">
+              <div class="col-5">
+                <p>Дополнительные расходы</p>
+              </div>
+              <div class="col-4"></div>
+              <div class="col-3"></div>
+            </div>
+            <div class="row">
+              <div class="col-5">
+                <p>Пенсионный фонд</p>
+              </div>
+              <div class="col-4">
+                <p id="pensCurrent">19 863 $</p>
+              </div>
+              <div class="col-3">
+                <p id="pensNew">19 863 $</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="new-offers">
     <div class="container">
-      <h2 class="section-title section-title--yellow-background">НОВЫЕ ПРЕДЛОЖЕНИЯ</h2>
+      <h2 class="section-title section-title--grey-background">НОВЫЕ ПРЕДЛОЖЕНИЯ</h2>
       <p class="section-description">Автомобили из США в наличии в Украине (с растаможкой, ремонтом, на Украинских
         номерах)</p>
       <div class="row new-offers__slider">
@@ -828,39 +850,6 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="./js/scripts.min.js"></script>
   <script src="./js/jquery.fancybox.min.js"></script>
-  <script src="./js/nouislider.min.js"></script>
-  <script>
-  
-  var rangeSlider = document.getElementById('price-range');
-  noUiSlider.create(rangeSlider, {
-    step: 10,
-    start: [6600, 101560],
-    connect: true,
-    range: {
-      'min': 6600,
-      'max': 120000
-    },
-    format: wNumb({
-      decimals: 0,
-      thousand: ',',
-      prefix: '$'
-    })
-  });
-
-  var inputRangeFrom = document.getElementById('price-range-from'),
-      inputRangeTo = document.getElementById('price-range-to');
-  rangeSlider.noUiSlider.on('update', function (values) {
-    inputRangeFrom.value = values[0];
-    inputRangeTo.value = values[1];
-  });
-  inputRangeFrom.addEventListener('change', function () {
-    rangeSlider.noUiSlider.set([this.value]);
-  });
-  inputRangeTo.addEventListener('change', function () {
-    rangeSlider.noUiSlider.set([this.value]);
-  });  
-
-  </script>
 </body>
 
 </html>

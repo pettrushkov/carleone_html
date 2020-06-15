@@ -18,6 +18,8 @@
 @import 'repair';
 @import 'catalog';
 @import 'partners';
+@import 'services';
+@import 'calculator';
 @import 'slick';
 @import 'slick-theme';
 @import 'footer';
@@ -268,9 +270,6 @@ strong {
         .current {
           position: relative;
           top: -9px;
-          // @include mediaw(576px) {
-          //   top: 12px;
-          // }
         }
         &::after {
           background-image: url(../img/elements/arrow-bottom-yellow.svg);
@@ -499,7 +498,8 @@ strong {
   p {
     margin-top: 15px;
   }    
-  h3 {
+  h2, h3, h4, h5, h6 {
+    margin-top: 25px;
     font-family: $fontRobotoBold;
   } 
 }
