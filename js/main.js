@@ -300,6 +300,13 @@ jQuery(document).ready(function ($) {
     $('.filter__block').slideToggle();
   });
 
+  
+
+  $('.services__title.mobile').click(function() {
+    $(this).toggleClass('active');
+    $('.services__list').slideToggle();
+  });
+
 
 });
 
