@@ -8,7 +8,8 @@
   position: relative;
   min-height: 451px;
   @include mediaw(767px) {
-    padding-top: 2.5px;
+    // padding-top: 2.5px;
+    padding-top: 0;
   }
   @include mediaw(576px) {
     margin-top: initial;

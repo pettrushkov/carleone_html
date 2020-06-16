@@ -1,10 +1,16 @@
 .repair-types {
   padding: 48px 0 177px;
   background-color: #fff;
+  @include mediaw(576px) {
+    padding: 0 0 48px;
+  }
   &__item {
     border: 1px solid transparent;
     transition: border-color .3s;
     margin-top: 56px;
+    @include mediaw(576px) {
+      margin-top: 20px;
+    }
     &:hover {
       border-color: #EDC939;
       .image-block {
@@ -19,6 +25,9 @@
       height: 219px;
       opacity: 0.6;
       transition: opacity .3s;
+      @include mediaw(576px) {
+        height: 150px;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -34,6 +43,20 @@
       text-align: center;
       padding: 22px 0 19px;
       transition: background-color .3s, color .3s;
+      @include mediaw(576px) {
+        padding: 14px 0;
+      }
+    }
+    .link {
+      display: none;
+      @include mediaw(576px) {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+        font-size: 14px;
+        line-height: 16px;
+        color: #0F59AF;
+      }
     }
   }
 }

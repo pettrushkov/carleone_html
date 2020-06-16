@@ -1,8 +1,37 @@
 .new-offers.partners {
+  @include mediaw(576px) {
+    margin-top: 43px;
+    padding-bottom: 0;
+  }
+  .section-title {
+    @include mediaw(576px) {
+      position: relative;
+      z-index: 1;
+      font-size: 24px;
+      line-height: 30px;
+      &::before {
+        content: " ";
+        display: block;
+        width: 2000px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -500px;
+        background-color: $colorYellow;
+        z-index: -1;
+      }
+    }
+  }
   .section-description {
     max-width: 1170px;
     text-align: left;
     margin: 30px auto 58px;
+    @include mediaw(576px) {
+      margin: 24px auto 20px;
+      font-size: 14px;
+      line-height: 18px;
+      font-family: $fontRobotoRegular;
+    }
   }
   .car__prices {
     background-color: #fff;
@@ -12,6 +41,12 @@
       font-family: $fontRobotoMedium;
       font-size: 16px;
       line-height: 20px;
+      @include mediaw(767px) {
+        padding: 10px 15px;
+      }
+      @include mediaw(767px) {
+        padding: 10px 40px;
+      }
       &.benefit {
         background-color: #EDEAE4;
       }
@@ -27,10 +62,38 @@
 
 .how-earn {
   padding-top: 23px;
+  @include mediaw(576px) {
+    padding-top: 0;
+    margin-top: 60px;
+  }
+  .section-title {
+    @include mediaw(576px) {
+      position: relative;
+      z-index: 1;
+      font-size: 24px;
+      line-height: 30px;
+      &::before {
+        content: " ";
+        display: block;
+        width: 2000px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -500px;
+        background-color: $colorYellow;
+        z-index: -1;
+      }
+    }
+  }
   .section-description {
     max-width: 1170px;
     text-align: left;
     margin: 30px auto 0;
+    @include mediaw(576px) {
+      font-family: $fontRobotoRegular;
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
   &__item {
     max-width: 1170px;
@@ -39,6 +102,10 @@
     background-color: #F6F5F5;
     position: relative;
     width: 100%;
+    @include mediaw(576px) {
+      margin: 45px auto 0;
+      padding: 46px 10px 28px;
+    }
     &::before {
       display: block;
       width: 58px;
@@ -53,6 +120,14 @@
       position: absolute;
       top: 0;
       left: 0;
+      @include mediaw(576px) {
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 60px;
+        background-color: $colorYellow;
+      }
     }
     &:first-child::before {
       content: "1";
@@ -88,6 +163,11 @@
       font-family: $fontRobotoBold;
       font-size: 30px;
       line-height: 35px;
+      @include mediaw(576px) {
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+      }
     }
   }
   .btn {
@@ -101,20 +181,51 @@
 
 .how-work-business {
   padding-top: 101px;
+  @include mediaw(576px) {
+    padding-top: 144px;
+  }
   .section-title {
+    @include mediaw(576px) {
+      position: relative;
+      z-index: 1;
+      font-size: 24px;
+      line-height: 28px;
+      &::before {
+        content: " ";
+        display: block;
+        width: 2000px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -500px;
+        background-color: $colorYellow;
+        z-index: -1;
+      }
+    }
     span {
       display: block;
       font-size: 30px;
       line-height: 35px;
+      @include mediaw(576px) {
+        font-size: 18px;
+        line-height: 28px;
+      }
     }
   }
   .section-subtitle {
     margin: 53px 0 24px;
     font-family: $fontRobotoBold;
     color: $colorBrown;
+    @include mediaw(576px) {
+      margin: 25px 0 27px;
+    }
   }
   .row {
     border: 1px solid #B5A9A3;
+    @include mediaw(767px) {
+      width: 186px;
+      margin: 0 auto;
+    }
   }
   .process {
     &__item {
@@ -130,14 +241,34 @@
         position: absolute;
         left: -15px;
         background-color: #B5A9A3;
+        @include mediaw(991px) {
+          left: -30px;
+        }
+        @include mediaw(767px) {
+          left: 0;
+          height: 1px;
+          width: 100px;
+        }
       }
       &::before {
         top: -3px;
         transform: rotate(-20deg);
+        @include mediaw(767px) {
+          top: -10px;
+          left: -19px;
+          transform: rotate(20deg);
+        }
       }
       &::after {
         bottom: -3px;
         transform: rotate(20deg);
+        @include mediaw(767px) {
+          top: -10px;
+          bottom: initial;
+          right: -19px;
+          left: initial;
+          transform: rotate(-20deg);
+        }
       }
       &.first::before, &.first::after {
         display: none;
@@ -214,23 +345,52 @@
   margin: 56px auto 0;
   background-color: #F6F5F5;
   padding: 36px 15px 47px 79px;
+  @include mediaw(576px) {
+    position: relative;
+    width: calc(100% + 30px);
+    left: -15px;
+    padding: 27px 20px 35px;
+  }
   &__title {
     font-family: $fontRobotoBold;
     text-align: center;
     font-size: 24px;
     line-height: 36px;
     color: $colorYellow;
+    @include mediaw(576px) {
+      font-size: 18px;
+      line-height: 24px;
+    }
     span {
       display: block;
       color: $colorBrown;
     }
   }
+  .the_content {
+    @include mediaw(576px) {
+      margin-top: 16px;
+      font-family: $fontRobotoRegular;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
   .row {
     border: none;
     margin-top: 50px;
+    @include mediaw(767px) {
+      width: 100%;
+    }
+    @include mediaw(576px) {
+      margin-top: 35px;
+    }
   }
   .process__item {
     padding: initial;
+    @include mediaw(767px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     &::before, &::after {
       display: none;
     }
@@ -240,6 +400,9 @@
     }
     .section-description {
       text-align: right;
+      @include mediaw(767px) {
+        margin: 0 0 0 8px;
+      }
     }
   }
   .the_content {
@@ -253,12 +416,27 @@
 .process-result {
   padding: 59px 0 0;
   background-color: #fff;
+  @include mediaw(576px) {
+    padding: 70px 0 0;
+  }
   &__row {
     display: flex;
     justify-content: space-between;
+    @include mediaw(767px) {
+      flex-wrap: wrap;
+    }
     .left, .right {
       width: 605px;
       padding: 42px 55px 48px 85px;
+      @include mediaw(991px) {
+        padding: 42px 20px 48px 30px;
+      }
+      @include mediaw(767px) {
+        width: 100%;
+      }
+      @include mediaw(576px) {
+        padding: 35px 15px 23px 30px;
+      }
       .title {
         text-align: center;
         color: $colorBrown;
@@ -266,6 +444,9 @@
       .list {
         font-size: 18px;
         line-height: 30px;
+        @include mediaw(576px) {
+          font-size: 16px;
+        }
         li {
           position: relative;
           &::before {
@@ -277,6 +458,9 @@
             position: absolute;
             top: 11px;
             left: -22px;
+            @include mediaw(576px) {
+              top: 9px;
+            }
           }
         }
       }
@@ -290,6 +474,9 @@
       }
       .list {
         margin-top: 44px;
+        @include mediaw(576px) {
+          margin-top: 23px;
+        }
       }
     }
     .right {
@@ -298,21 +485,35 @@
         font-family: $fontRobotoBlack;
         font-size: 30px;
         line-height: 35px;
+        @include mediaw(576px) {
+          font-size: 24px;
+          line-height: 28px;
+        }
       }
       .list {
         margin-top: 37px;
         font-family: $fontRobotoMedium;
+        @include mediaw(576px) {
+          margin-top: 22px;
+        }
       }
     }
   }
   &__footnote {
     margin-top: 97px;
     text-align: center;
+    @include mediaw(576px) {
+      margin-top: 48px;
+    }
     p {
       font-family: $fontRobotoBold;
       font-size: 20px;
       line-height: 23px;
       color: $colorBrown;
+      @include mediaw(576px) {
+        font-size: 20px;
+        line-height: 23px;
+      }
       span {
         margin-top: 30px;
         display: block;
@@ -333,11 +534,20 @@
     font-family: $fontRobotoBold;
     font-size: 18px;
     line-height: 24px;
+    @include mediaw(576px) {
+      display: block;
+      max-width: initial;
+      text-align: center;
+      padding: 10px 30px;
+    }
   }
 }
 
 .dilers-reviews {
   padding-top: 141px;
+  @include mediaw(576px) {
+    padding-top: 50px;
+  }
   .section-title {
     background-color: $colorYellow;
     display: inline-block;
@@ -346,6 +556,25 @@
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 20px;
+    @include mediaw(576px) {
+      margin-bottom: 0;
+      padding: 14px 20px;
+      position: relative;
+      z-index: 1;
+      font-size: 24px;
+      line-height: 28px;  
+      &::before {
+        content: " ";
+        display: block;
+        width: 2000px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -500px;
+        background-color: $colorYellow;
+        z-index: -1;
+      }
+    }
   }
   .row {
     margin-top: 36px;
@@ -389,12 +618,17 @@
     }
   }
   &__footnote {
-    margin-top: 87px;
+    margin: 87px 0;
     text-align: center;
     color: $colorYellow;
     font-family: $fontRobotoMedium;
     font-size: 30px;
     line-height: 34px;
+    @include mediaw(576px) {
+      font-size: 24px;
+      line-height: 30px;
+      margin: 52px 0;
+    }
     span {
       display: block;
     }

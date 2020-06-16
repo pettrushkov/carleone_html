@@ -1,6 +1,9 @@
 .post {
   padding: 50px 0 121px;
   background-color: #fff;
+  @include mediaw(576px) {
+    padding: 20px 0 70px;
+  }
   &__image {
     text-align: center;
     img {
@@ -11,10 +14,23 @@
     margin-top: 66px;
     background-color: $colorYellow;
     padding: 60px 265px 66px;
+    @include mediaw(1199px) {
+      padding: 60px 100px;
+    }
+    @include mediaw(767px) {
+      padding: 50px;
+    }
+    @include mediaw(576px) {
+      padding: 21px 15px 18px;
+      margin-top: 10px;
+    }
   }
   .the_content {
     padding: 38px 0 79px;
     background-color: #F6F5F5;
+    @include mediaw(576px) {
+      padding: 15px 20px 30px;
+    }
   }
   .btn {
     margin-top: 34px;
@@ -22,5 +38,9 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    @include mediaw(576px) {
+      margin-top: 20px;
+      padding: 18px 30px;
+    }
   }
 }

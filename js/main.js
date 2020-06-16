@@ -196,14 +196,26 @@ jQuery(document).ready(function ($) {
     prevArrow: $('.new-offers__slider-prev'),
     nextArrow: $('.new-offers__slider-next'),
     infinite: false,
-    // responsive: [
-    //   {
-    //     breakpoint: 767,
-    //     settings: {
-    //       slidesToShow: 1
-    //     }
-    //   }
-    // ]
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   });
 
 
@@ -214,14 +226,26 @@ jQuery(document).ready(function ($) {
     prevArrow: $('.news-preview__slider-prev'),
     nextArrow: $('.news-preview__slider-next'),
     infinite: false,
-    // responsive: [
-    //   {
-    //     breakpoint: 767,
-    //     settings: {
-    //       slidesToShow: 1
-    //     }
-    //   }
-    // ]
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   });
 
 
@@ -231,14 +255,6 @@ jQuery(document).ready(function ($) {
     arrows: true,
     prevArrow: $('.auto__buttons-prev'),
     nextArrow: $('.auto__buttons-next'),
-    // responsive: [
-    //   {
-    //     breakpoint: 767,
-    //     settings: {
-    //       slidesToShow: 1
-    //     }
-    //   }
-    // ]
   });
 
 
@@ -248,14 +264,15 @@ jQuery(document).ready(function ($) {
     slidesToShow: 5,
     slidesToScroll: 1,
     focusOnSelect: true,
-    // responsive: [
-    //   {
-    //     breakpoint: 767,
-    //     settings: {
-    //       slidesToShow: 1
-    //     }
-    //   }
-    // ]
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 3
+        }
+      }
+    ]
   });
 
 
@@ -274,6 +291,13 @@ jQuery(document).ready(function ($) {
     $(this).addClass('active');
     $('.calculator__row').hide();
     $('.calculator__row[data-raztamozhka="' + $(this).text() + '"]').show();
+  });
+
+
+
+  $('.section-description.mobile').click(function() {
+    $(this).toggleClass('active');
+    $('.filter__block').slideToggle();
   });
 
 

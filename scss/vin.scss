@@ -1,6 +1,9 @@
 .vin {
   padding: 64px 0 0;
   background-color: #fff;
+  @include mediaw(576px) {
+    padding: 9px 0 0;
+  }
   &__title {
     font-family: $fontRobotoBold;
     font-size: 30px;
@@ -8,6 +11,11 @@
     text-align: center;
     margin-bottom: 53px;
     color: $colorBrown;
+    @include mediaw(576px) {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 30px;
+    }
   }
   img {
     display: block;
@@ -15,10 +23,19 @@
   }
   &__description {
     padding: 78px 0 83px;
+    @include mediaw(576px) {
+      padding: 39px 0 48px;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: center;
+    }
   }
   &__how {
     background-color: #F8F7F4;
     padding: 55px 0 61px;
+    @include mediaw(576px) {
+      padding: 36px 0 47px;
+    }
     &-title {
       font-family: $fontRobotoBold;
       font-size: 30px;
@@ -26,10 +43,18 @@
       text-align: center;
       color: $colorBrown;
       margin-bottom: 51px;
+      @include mediaw(576px) {
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 31px;
+      }
     }
   }
   &__decryption {
     background-color: #fff;
     padding: 97px 0 0;
+    @include mediaw(576px) {
+      padding: 31px 0 0;
+    }
   }
 }

@@ -157,6 +157,10 @@ strong {
     background-color: $colorBrown;
     background-repeat: no-repeat;
     background-position: center;
+    @include mediaw(576px) {
+      width: 36px;
+      height: 36px;
+    }
   }
   &-first {
     background-image: url(../img/elements/icon-pagination-first.svg);
@@ -168,6 +172,9 @@ strong {
     display: flex;
     li {
       margin: 0 11px;
+      @include mediaw(576px) {
+        margin: 0 6.5px;
+      }
       &.active {
         a {
           background-color: $colorYellow;
@@ -184,6 +191,11 @@ strong {
         line-height: 21px;
         text-align: center;
         transition: background-color .3s;
+        @include mediaw(576px) {
+          width: 36px;
+          height: 36px;
+          padding-top: 8.34px;
+        }
         &:hover {
           background-color: $colorYellow;
         }
@@ -195,6 +207,9 @@ strong {
 .feedback {
   margin: 0 auto;
   max-width: 928px;
+  @include mediaw(991px) {
+    max-width: initial;
+  }
   &.dark {
     .title {
       font-family: $fontRobotoBold;
@@ -217,22 +232,40 @@ strong {
   }
   &.mb139 {
     margin-bottom: 139px;
+    @include mediaw(576px) {
+      margin-bottom: 45px;
+    }
   }
   &__header {
     text-align: center;
     background-color: $colorYellow;
     padding: 30px 150px 17px;
+    @include mediaw(991px) {
+      padding: 30px 15px 17px;
+    }
+    @include mediaw(576px) {
+      padding: 19px 15px 22px;
+    }
     .title {
       font-family: $fontRobotoBold;
       font-size: 30px;
       line-height: 35px;
       color: #FFFFFF;
+      @include mediaw(576px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
     }
     .description {
       margin-top: 7px;
       font-size: 18px;
       line-height: 21px;
       color: #000000;
+      @include mediaw(576px) {
+        margin-top: 8px;
+        font-size: 14px;
+        line-height: 16px;
+      }
     }
   }
   &__form {
@@ -240,15 +273,26 @@ strong {
     padding: 13px 50px 48px;
     text-align: center;
     border: 1px solid #B5A9A3;
+    @include mediaw(576px) {
+      padding: 3px 14px 39px;
+      background-color: #F6F6F6;
+    }
     label {
       display: block;
       margin-top: 10px;
+      @include mediaw(576px) {
+        margin-top: 3px;
+      }
       span {
         display: block;
         padding-left: 27px;
         background-repeat: no-repeat;
         background-position: left center;
         text-align: left;
+        @include mediaw(576px) {
+          background-image: none !important;
+          padding-left: initial;
+        }
         &.name {
           background-image: url(../img/elements/icon-name.svg);
         }
@@ -267,6 +311,9 @@ strong {
         padding: 10px;
         margin-top: 2px;
         border-radius: 0;
+        @include mediaw(576px) {
+          height: 48px;
+        }
         .current {
           position: relative;
           top: -9px;
@@ -288,6 +335,9 @@ strong {
       }
       textarea {
         height: 110px;
+        @include mediaw(576px) {
+          height: 74px;
+        }
       }
     }
     &-footnote {
@@ -305,6 +355,11 @@ strong {
       margin-top: 14px;
       padding: 20px 25px;
       min-width: 236px;
+      @include mediaw(576px) {
+        min-width: 216px;
+        padding: 13px;
+        margin-top: 20px;
+      }
     }
   }
 }
@@ -312,6 +367,9 @@ strong {
 .new-offers {
   margin-top: 135px;
   padding-bottom: 58px;
+  @include mediaw(576px) {
+    margin-top: 58px;
+  }
   .car {
     margin-top: 37px;
     @include mediaw(576px) {
@@ -423,14 +481,23 @@ strong {
 .news-preview {
   padding: 41px 0 55px;
   background-color: #F8F7F4;
+  @include mediaw(576px) {
+    padding: 22px 0 52px;
+  }
   .row {
     margin-top: 46px;
+    @include mediaw(576px) {
+      margin-top: 20px;
+    }
   }
   .new {
     display: block;
     .image-block {
       height: 217px;
       border: 1px solid #000;
+      @include mediaw(576px) {
+        height: 200px;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -444,6 +511,12 @@ strong {
       font-family: $fontRobotoLight;
       border: 1px solid #B5A9A3;
       transition: border-color .3s;
+      @include mediaw(576px) {
+        padding: 15px 15px 20px;
+        font-size: 16px;
+        line-height: 19px;
+        color: #0F59AF;
+      }
     }
     &:hover {
       .text {
@@ -481,6 +554,9 @@ strong {
 .promotions {
   text-align: center;
   padding: 73px 0 61px;
+  @include mediaw(576px) {
+    padding: 45px 0 18px;
+  }
   .section-title {
     color: $colorYellow;
   }
@@ -497,6 +573,7 @@ strong {
   line-height: 19px;
   p {
     margin-top: 15px;
+    font-family: $fontRobotoRegular;
   }    
   h2, h3, h4, h5, h6 {
     margin-top: 25px;

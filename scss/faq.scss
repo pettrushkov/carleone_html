@@ -1,17 +1,41 @@
 .faq {
-  padding-top: 85px;
+  padding: 85px 0;
+  @include mediaw(576px) {
+    padding: 0;
+  }
+  &--overlay {
+    @include mediaw(576px) {
+      margin: 0 15px;
+    }
+  }
   .container {
     @include mediaw(576px) {
       padding: 0;
     }
   }
+  .section-title {
+    @include mediaw(576px) {
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
   .section-subtitle {
     margin-bottom: 49px;
+    @include mediaw(576px) {
+      font-family: $fontRobotoMedium;
+      font-size: 18px;
+      line-height: 20px;
+      margin-bottom: 25px;
+    }
   }
   &__under-content {
     line-height: 19px;
     max-width: 1170px;
     margin: 0 auto 38px;
+    @include mediaw(576px) {
+      margin: 0 15px 14px;
+      text-align: center;
+    }
   }
   &__title {
     font-family: $fontRobotoBold;
@@ -217,5 +241,8 @@
   }
   .pagination {
     margin: 50px auto 100px;
+    @include mediaw(576px) {
+      margin: 30px auto 59px;
+    }
   }
 }

@@ -18,6 +18,9 @@
     text-align: center;
     color: $colorYellow;
     margin-bottom: 30px;
+    @include mediaw(576px) {
+      margin-bottom: 16px;
+    }
     &.mb0 {
       margin-bottom: 0;
     }
@@ -53,6 +56,9 @@
   &.partners {
     padding-top: 67px;
     background-color: #fff;
+    @include mediaw(576px) {
+      padding-top: 31px;
+    }
     .quick-order__title {
       text-align: center;
       max-width: 911px;
@@ -60,30 +66,61 @@
       font-family: $fontRobotoMedium;
       font-size: 30px;
       line-height: 36px;
+      @include mediaw(576px) {
+        font-size: 20px;
+        line-height: 30px;
+      }
       span {
         font-family: $fontRobotoBold;
         font-size: 34px;
         line-height: 36px;
         color: $colorYellow;
+        @include mediaw(576px) {
+          font-size: 24px;
+          line-height: 30px;
+        }
       }
     }
     .quick-order--overlay {
       margin-top: 82px;
+      @include mediaw(576px) {
+        margin-top: 52px;
+      }
     }
     form input[type=submit] {
       max-width: 398px;
+      @include mediaw(576px) {
+        font-size: 14px;
+        line-height: 16px;
+        display: inline-block;
+        padding: 0 40px;
+        width: initial;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
     .quick-order-partners__footnote {
       max-width: 1170px;
       margin: 92px auto 0;
       font-size: 24px;
       line-height: 28px;
+      @include mediaw(576px) {
+        margin: 35px auto 0;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+      }
       span {
         display: block;
         font-family: $fontRobotoBold;
         font-size: 30px;
         line-height: 35px;
         color: $colorYellow;
+        @include mediaw(576px) {
+          font-size: 18px;
+          line-height: 20px;
+        }
       }
     }
   }
@@ -1950,6 +1987,30 @@
 }
 
 .main-office {
+  &.light {
+    @include mediaw(576px) {
+      background-color: #EDEAE4;
+      color: #000;
+      .section-title {
+        color: $colorBrown;
+      }
+      .recall, .main-office__email, .main-office__address strong {
+        color: #0078BC;
+      }
+      .main-office__call a:not(.btn)::before {
+        background-image: url(../img/elements/icon-phone-grey.svg);
+      }
+      .main-office__shedule .title::before {
+        background-image: url(../img/elements/icon-clock-grey.svg);
+      }
+      .main-office__email::before {
+        background-image: url(../img/elements/icon-email-grey.svg);
+      }
+      .main-office__address::before {
+        background-image: url(../img/elements/icon-marker-grey.svg);
+      }
+    }
+  }
   background-color: #EDEAE4;
   padding: 83px 0 81px;
   @include mediaw(576px) {

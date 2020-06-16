@@ -1,15 +1,84 @@
 .lots {
   background-color: #fff;
   padding-top: 60px;
+  @include mediaw(576px) {
+    padding-top: 31px;
+  }
   .filter {
     .section-description {
       color: #fff;
       background-color: $colorBrown;
       padding: 23px 0;
+      @include mediaw(1199px) {
+        display: none;
+      }
+      &.mobile {
+        display: none;
+        transition: background-color .3s;
+        cursor: pointer;
+        position: relative;
+        @include mediaw(1199px) {
+          display: block;
+          padding: 16px 40px;
+          text-align: center;
+          background-color: $colorYellow;
+          color: $colorBrown;
+          font-family: $fontRobotoBold;
+          font-size: 18px;
+          line-height: 21px;
+          margin-bottom: 0;
+        }
+        @include mediaw(576px) {
+          margin-top: 0;
+        }
+        &::after {
+          content: " ";
+          display: block;
+          width: 25px;
+          height: 25px;
+          position: absolute;
+          top: 14px;
+          right: 13px;
+          background-color: #fff;
+          border-radius: 50%;
+          background-image: url(../img/elements/arrow-bottom-brown.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          transform: rotate(180deg);
+          transition: transform .3s;
+        }
+        &.active {
+          &::after {
+            transform: rotate(0);
+          }
+        }
+        &:hover {
+          background-color: darken($colorYellow, 10%);
+        }
+      }
     }
     &__block {
       border: 1px solid #B5A9A3;
       padding: 23px;
+      @include mediaw(1199px) {
+        display: none;
+      }
+      .sort.mobile {
+        display: none;
+        @include mediaw(1199px) {
+          display: inline-block;
+        }
+        @include mediaw(576px) {
+          width: 210px;
+          font-family: $fontRobotoMedium;
+          font-size: 14px;
+          line-height: 16px;
+          height: 40px;
+          display: block;
+          margin-left: auto;
+          margin-bottom: 22px;
+        }
+      }
     }
     .price-range-wrapper {
       margin-top: 30px;
@@ -18,6 +87,9 @@
       margin-top: 40px;
       display: flex;
       justify-content: space-between;
+      @include mediaw(576px) {
+        margin-top: 30px;
+      }
       #price-range-from, #price-range-to {
         width: 150px;
         height: 54px;
@@ -25,12 +97,20 @@
         border: 1px solid #000000;
         text-align: center;
         padding: 0 15px;
+        @include mediaw(576px) {
+          width: 112px;
+          height: 40px;
+        }
       }
     }
     .btn {
       margin-top: 65px;
       width: 100%;
       padding: 17px 0;
+      @include mediaw(576px) {
+        padding: 13px 0;
+        margin-top: 30px;
+      }
     }
   }
   .nice-select {
@@ -46,15 +126,25 @@
     padding: 0 20px;
     &.sort {
       width: 290px;
+      @include mediaw(576px) {
+        display: none;
+      }
     }
     @include mediaw(576px) {
-      height: 48px;
+      height: 40px;
+      font-size: 16px;
+      line-height: 19px;
+      margin-top: 9px;
     }
     .current {
       position: relative;
       top: 14px;
       @include mediaw(576px) {
-        top: 12px;
+        top: 10px;
+        left: -12px;
+        font-size: 16px;
+        line-height: 19px;
+        font-family: $fontRobotoRegular;
       }
     }
     &::after {
@@ -75,6 +165,20 @@
   .lot {
     padding: 48px 0 38px;
     border-bottom: 1px solid #B5A9A3;
+    @include mediaw(576px) {
+      padding: 0 0 26px;
+      border: 1px solid $colorBrown;
+      margin: 30px 0 0;
+    }
+    div[class^="col-"]:first-child {
+      @include mediaw(576px) {
+        padding: 0;
+        img {
+          height: 200px;
+          object-fit: cover;
+        }
+      }
+    }
     .image-block {
       height: 100%;
       img {
@@ -86,26 +190,45 @@
     .car {
       margin-top: 37px;
       @include mediaw(576px) {
-        margin-top: 26px;
+        margin-top: 9px;
       }
       .title-and-price {
         display: flex;
         justify-content: space-between;
+        @include mediaw(576px) {
+          padding-bottom: 13px;
+          border-bottom: 1px solid #C4C4C4;
+        }
         .title {
           color: #000000;
           max-width: 280px;
           font-family: $fontRobotoMedium;
           font-size: 20px;
           line-height: 23px;
+          @include mediaw(576px) {
+            max-width: 50%;
+            font-size: 16px;
+            line-height: 19px;
+          }
         }
         .price {
           color: $colorBrown;
           font-family: $fontRobotoBold;
           font-size: 24px;
           line-height: 28px;
+          @include mediaw(576px) {
+            font-family: $fontRobotoMedium;
+            font-size: 20px;
+            line-height: 23px;
+            color: $colorYellow;
+          }
         }
       }
       .characteristics {
+        @include mediaw(576px) {
+          display: flex;
+          flex-wrap: wrap;
+        }
         p {
           position: relative;
           font-size: 16px;
@@ -114,6 +237,10 @@
           color: #000;
           padding-left: 42px;
           margin-top: 17px;
+          @include mediaw(576px) {
+            margin-right: 15px;
+            margin-top: 20px;
+          }
           &::after {
             content: " ";
             display: block;
@@ -125,6 +252,9 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
+            @include mediaw(576px) {
+              left: 7px;
+            }
           }
         }
         .run::after {
@@ -149,16 +279,30 @@
       .btn {
         width: 100%;
         padding: 18px 0;
+        @include mediaw(576px) {
+          display: block;
+          width: 176px;
+          margin: 0 auto;
+        }
         &:first-child {
           margin-top: 17px;
+          @include mediaw(576px) {
+            margin-top: 20px;
+          }
         }
         &:not(:first-child) {
           margin-top: 20px;
+          @include mediaw(576px) {
+            margin-top: 10px;
+          }
         }
       }
     }
   }
   .pagination {
     margin-top: 60px;
+    @include mediaw(576px) {
+      margin-top: 16px;
+    }
   }
 }
